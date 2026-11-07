@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>川星</title>
+<meta name="description" content="每天自动收集 GitHub 上的高 star 项目，按学习路径、学习方法、Skills 等用途分类。">
+<meta name="theme-color" content="#f5f4ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23174f9e'/%3E%3Cpath d='M16 6l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L6 13.2l7.1-.6z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root {
+  --bg: #f5f4ef; --surface: #ffffff; --sunk: #ecebe4; --ink: #17181c; --muted: #61636b; --faint: #8b8d95;
+  --line: #dfddd4; --line-strong: #c9c6bb;
+  --accent: #174f9e; --accent-ink: #ffffff; --accent-soft: #e4ebf6;
+  --new: #17784b; --new-soft: #e0f1e7; --hot: #b4481a; --hot-soft: #f8e7dc;
+  --shadow: 0 10px 24px rgba(23, 24, 28, .08);
+  --ease: cubic-bezier(.2, .8, .2, 1); --ease-enter: cubic-bezier(.22, 1, .36, 1);
+  --r-sm: 6px; --r-md: 10px; --r-lg: 14px;
+  --wrap: 1120px; --gutter: 24px;
+  --font: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121316; --surface: #1b1c20; --sunk: #232429; --ink: #ececef; --muted: #a2a4ad; --faint: #7d7f88;
+    --line: #2c2d33; --line-strong: #3d3f46;
+    --accent: #8db4ff; --accent-ink: #0f1830; --accent-soft: #1b2a45;
+    --new: #6fd3a0; --new-soft: #15302a; --hot: #ff9a6b; --hot-soft: #3a2318;
+    --shadow: 0 10px 24px rgba(0, 0, 0, .35);
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.6 var(--font); }
+a { color: inherit; }
+button, input, select { font: inherit; color: inherit; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 50; background: var(--ink); color: var(--bg);
+  padding: 10px 14px; border-radius: var(--r-sm); text-decoration: none; }
+.skip:focus { top: 12px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- 首屏 ---------- */
+.hero { padding-block: 56px 28px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: 13px; margin: 0 0 14px; }
+.eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--new); }
+.hero h1 { margin: 0; font-size: clamp(40px, 7vw, 68px); line-height: 1.05; letter-spacing: .02em; font-weight: 700; }
+.hero h1 .line { display: block; overflow: hidden; }
+.hero h1 .line > span { display: inline-block; }
+.hero h1 .sub { font-size: clamp(20px, 3vw, 28px); font-weight: 600; color: var(--muted); letter-spacing: 0; margin-top: 10px; }
+.lead { max-width: 620px; margin: 16px 0 0; color: var(--muted); font-size: 16px; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 32px; max-width: 640px; }
+.stat { border-top: 2px solid var(--ink); padding-top: 10px; }
+.stat b { display: block; font-size: clamp(28px, 4vw, 40px); line-height: 1.1; font-variant-numeric: tabular-nums; font-weight: 700; }
+.stat span { color: var(--muted); font-size: 13px; }
+
+/* ---------- 今日上榜 ---------- */
+.board { margin: 8px 0 36px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 18px 20px 8px; }
+.board-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 6px; }
+.board h2 { margin: 0; font-size: 18px; }
+.board-head p { margin: 0; color: var(--faint); font-size: 13px; }
+.rank { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; }
+.rank li { border-top: 1px solid var(--line); }
+.rank li:nth-child(-n+2) { border-top: 0; }
+.rank a { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; align-items: center; gap: 10px;
+  padding: 11px 0; text-decoration: none; min-height: 44px; }
+.rank .no { color: var(--faint); font-variant-numeric: tabular-nums; font-size: 13px; }
+.rank .nm { min-width: 0; }
+.rank .nm b { display: block; font-weight: 600; font-size: 14.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rank .nm small { display: block; color: var(--muted); font-size: 12.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rank .gain { color: var(--hot); font-weight: 600; font-size: 13px; font-variant-numeric: tabular-nums; text-align: right; }
+.rank .bar { display: block; height: 3px; border-radius: 2px; background: var(--hot-soft); margin-top: 5px; overflow: hidden; }
+.rank .bar i { display: block; height: 100%; background: var(--hot); transform-origin: left; }
+.rank a .nm b { background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size 120ms var(--ease); }
+
+/* ---------- 筛选栏 ---------- */
+.controls { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px);
+  border-bottom: 1px solid transparent; transition: border-color 200ms var(--ease); }
+.controls.stuck { border-bottom-color: var(--line); }
+.controls .wrap { padding-top: 12px; padding-bottom: 12px; }
+.bar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.search { flex: 1 1 240px; min-width: 0; position: relative; }
+.search input { width: 100%; height: 40px; padding: 0 12px 0 36px; border-radius: var(--r-md); border: 1px solid var(--line);
+  background: var(--surface); transition: border-color 150ms var(--ease); }
+.search input:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px var(--accent-soft); }
+.search svg { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--faint); }
+.seg { position: relative; display: inline-flex; background: var(--sunk); border-radius: var(--r-md); padding: 3px; }
+.seg .ind { position: absolute; top: 3px; left: 0; height: calc(100% - 6px); width: 1px; background: var(--surface);
+  border-radius: 7px; box-shadow: 0 1px 2px rgba(0,0,0,.08); transform-origin: left center; }
+.seg button { position: relative; z-index: 1; border: 0; background: transparent; color: var(--muted); height: 34px;
+  padding: 0 12px; border-radius: 7px; font-size: 13.5px; cursor: pointer; white-space: nowrap; transition: color 150ms var(--ease); }
+.seg button[aria-pressed="true"] { color: var(--ink); font-weight: 600; }
+select { height: 40px; padding: 0 10px; border-radius: var(--r-md); border: 1px solid var(--line); background: var(--surface); font-size: 13.5px; cursor: pointer; }
+.check { display: inline-flex; gap: 6px; align-items: center; color: var(--muted); font-size: 13.5px; cursor: pointer; min-height: 40px; }
+.check input { width: 16px; height: 16px; accent-color: var(--accent); }
+.chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin-top: 10px; padding-bottom: 2px; }
+.chips::-webkit-scrollbar { display: none; }
+.chip { flex: none; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; height: 34px; padding: 0 14px;
+  font-size: 13.5px; cursor: pointer; white-space: nowrap; transition: background-color 150ms var(--ease), border-color 150ms var(--ease), color 150ms var(--ease), transform 90ms var(--ease); }
+.chip small { color: var(--faint); margin-left: 5px; font-variant-numeric: tabular-nums; }
+.chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.chip[aria-pressed="true"] small { color: inherit; opacity: .7; }
+
+/* ---------- 列表 ---------- */
+main { padding-block: 18px 40px; }
+.count { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.card { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg);
+  padding: 16px 18px 14px; display: flex; flex-direction: column; gap: 10px; min-width: 0;
+  transition: transform 120ms var(--ease), border-color 120ms var(--ease), box-shadow 120ms var(--ease), opacity 200ms var(--ease); }
+.card.read { opacity: .55; }
+.card h3 { margin: 0; font-size: 15.5px; line-height: 1.35; font-weight: 600; overflow-wrap: anywhere; }
+.card h3 a { text-decoration: none; }
+.card h3 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.card .owner { color: var(--muted); font-weight: 400; }
+.card .desc { margin: 0; font-size: 14px; color: var(--ink); flex: 1;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.card .desc.none { color: var(--faint); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; color: var(--muted); font-size: 12.5px; }
+.meta .lang { display: inline-flex; align-items: center; gap: 5px; }
+.meta .lang i { width: 9px; height: 9px; border-radius: 50%; background: var(--faint); }
+.pill { border-radius: 5px; padding: 1px 7px; font-weight: 600; font-size: 12px; }
+.pill.new { background: var(--new-soft); color: var(--new); }
+.pill.hot { background: var(--hot-soft); color: var(--hot); }
+.tag { color: var(--accent); }
+.foot { display: flex; align-items: center; gap: 10px; border-top: 1px solid var(--line); padding-top: 10px; color: var(--faint); font-size: 12px; }
+.mark { position: relative; z-index: 2; margin-left: auto; border: 1px solid var(--line); background: var(--surface); color: var(--muted);
+  border-radius: var(--r-sm); font-size: 12px; height: 28px; padding: 0 10px; cursor: pointer;
+  transition: background-color 150ms var(--ease), color 150ms var(--ease), transform 90ms var(--ease); }
+.btn { display: block; margin: 24px auto 0; height: 44px; padding: 0 26px; border-radius: var(--r-md); border: 0;
+  background: var(--ink); color: var(--bg); font-weight: 600; cursor: pointer; transition: transform 120ms var(--ease), background-color 150ms var(--ease); }
+[hidden] { display: none !important; }
+.empty { grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 60px 0; }
+footer { border-top: 1px solid var(--line); color: var(--faint); font-size: 12.5px; padding-block: 20px 40px; }
+footer a { color: var(--muted); }
+
+/* ---------- 悬停与按下：只对精确指针生效 ---------- */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover { transform: translateY(-2px); border-color: var(--line-strong); box-shadow: var(--shadow);
+    transition-duration: 180ms; }
+  .card:hover h3 a { color: var(--accent); }
+  .chip:hover { border-color: var(--line-strong); }
+  .chip[aria-pressed="false"]:hover { background: var(--sunk); }
+  .seg button:hover { color: var(--ink); }
+  .mark:hover { background: var(--sunk); color: var(--ink); }
+  .btn:hover { transform: translateY(-1px); background: color-mix(in srgb, var(--ink) 86%, var(--bg)); }
+  .rank a:hover .nm b { background-size: 100% 1px; transition-duration: 150ms; }
+  footer a:hover { color: var(--ink); }
+}
+.chip:active, .mark:active { transform: scale(.985); }
+.btn:active { transform: translateY(1px) scale(.985); transition-duration: 90ms; }
+
+@media (max-width: 960px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 680px) {
+  :root { --gutter: 16px; }
+  .hero { padding-block-start: 36px; }
+  .grid, .rank { grid-template-columns: minmax(0, 1fr); }
+  .rank li:nth-child(2) { border-top: 1px solid var(--line); }
+  .bar { gap: 8px; }
+  .search { flex-basis: 100%; }
+  .seg { flex: 1 1 100%; }
+  .seg button { flex: 1; padding: 0 6px; height: 38px; }
+  select { flex: 1; }
+  .chip { height: 40px; }
+  .mark { height: 36px; }
+  .board { padding: 14px 16px 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0ms !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#list">跳到项目列表</a>
+
+<header class="hero wrap">
+  <p class="eyebrow" data-enter><span class="dot"></span><span id="updated">GitHub 每日精选</span></p>
+  <h1>
+    <span class="line"><span data-enter-line>川星</span></span>
+    <span class="line sub"><span data-enter-line>GitHub 高 star 项目，按用途分好类</span></span>
+  </h1>
+  <p class="lead" data-enter>每天早上 8 点自动收集一次：Trending 上榜的、近一个月冒头的、各分类里星最多的。学习路径、学习方法、Skills、面试、教程分开放，新收录的单独标出来。</p>
+  <div class="stats" data-enter>
+    <div class="stat"><b data-count="total">0</b><span>已收录项目</span></div>
+    <div class="stat"><b data-count="today">0</b><span>今天新收录</span></div>
+    <div class="stat"><b data-count="trending">0</b><span>今日 Trending 上榜</span></div>
+  </div>
+</header>
+
+<section class="wrap" id="boardWrap" hidden>
+  <div class="board">
+    <div class="board-head"><h2>今日上榜</h2><p>按今天新增的 star 排序</p></div>
+    <ol class="rank" id="rank"></ol>
+  </div>
+</section>
+
+<div class="controls" id="controls">
+  <div class="wrap">
+    <div class="bar">
+      <label class="search">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input type="search" id="q" placeholder="搜索名称、简介、话题" aria-label="搜索项目">
+      </label>
+      <div class="seg" id="range" role="group" aria-label="收录时间">
+        <span class="ind" aria-hidden="true"></span>
+        <button type="button" data-v="all" aria-pressed="true">全部</button>
+        <button type="button" data-v="today" aria-pressed="false">今天新增</button>
+        <button type="button" data-v="week" aria-pressed="false">近 7 天</button>
+        <button type="button" data-v="trending" aria-pressed="false">今日上榜</button>
+      </div>
+      <select id="sort" aria-label="排序方式">
+        <option value="stars">按 Star 数</option>
+        <option value="new">按收录时间</option>
+        <option value="hot">按今日新增 Star</option>
+        <option value="gain">按收录后涨星</option>
+      </select>
+      <label class="check"><input type="checkbox" id="hideRead">隐藏已读</label>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="分类"></div>
+  </div>
+</div>
+
+<main class="wrap">
+  <p class="count" id="count" aria-live="polite"></p>
+  <div class="grid" id="list" tabindex="-1"></div>
+  <button type="button" class="btn" id="more" hidden>再看 60 个</button>
+</main>
+
+<footer class="wrap">
+  数据来自 GitHub Trending 和 GitHub 搜索，分类规则在 categories.json 里，可以自己改。已读标记只存在这台设备的浏览器里。动画用 <a href="https://gsap.com" target="_blank" rel="noopener">GSAP</a>。
+</footer>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="data.js"></script>
+<script>
+(function () {
+  var D = window.CX_DATA;
+  var hasGsap = !!window.gsap;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var animate = hasGsap && !reduce;
+  var $ = function (id) { return document.getElementById(id); };
+
+  if (!D) {
+    $('list').innerHTML = '<div class="empty">还没有数据。先在项目文件夹里运行 python3 fetch.py。</div>';
+    return;
+  }
+
+  var PAGE = 60;
+  var state = { cat: 'all', range: 'all', sort: 'stars', q: '', hideRead: false, shown: PAGE };
+  var read = {};
+  try { read = JSON.parse(localStorage.getItem('cx-read') || '{}') || {}; } catch (e) {}
+  try {
+    var saved = JSON.parse(localStorage.getItem('cx-view') || '{}') || {};
+    ['cat', 'range', 'sort'].forEach(function (k) { if (saved[k]) state[k] = saved[k]; });
+    state.hideRead = !!saved.hideRead;
+  } catch (e) {}
+  function save() {
+    try { localStorage.setItem('cx-view', JSON.stringify({ cat: state.cat, range: state.range, sort: state.sort, hideRead: state.hideRead })); } catch (e) {}
+  }
+
+  var catName = {};
+  D.categories.forEach(function (c) { catName[c.id] = c.name; });
+  if (state.cat !== 'all' && !catName[state.cat]) state.cat = 'all';
+  var weekAgo = (function () {
+    var d = new Date(D.today + 'T00:00:00'); d.setDate(d.getDate() - 6);
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  })();
+  var LANG = { Python: '#3572A5', JavaScript: '#f1e05a', TypeScript: '#3178c6', Go: '#00ADD8', Rust: '#dea584', Java: '#b07219',
+    'C++': '#f34b7d', C: '#555555', 'C#': '#178600', Shell: '#89e051', HTML: '#e34c26', CSS: '#563d7c', Vue: '#41b883',
+    Swift: '#F05138', Kotlin: '#A97BFF', Ruby: '#701516', PHP: '#4F5D95', Dart: '#00B4AB', 'Jupyter Notebook': '#DA5B0B',
+    Markdown: '#083fa1', Lua: '#000080', Zig: '#ec915c', MDX: '#fcb32c', Svelte: '#ff3e00' };
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function k(n) { return n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, '') + 'k' : String(n); }
+
+  /* ---------- 首屏数字和今日上榜 ---------- */
+  $('updated').textContent = 'GitHub 每日精选 · 更新于 ' + D.generated;
+  var totals = {
+    total: D.repos.length,
+    today: D.repos.filter(function (r) { return r.fs === D.today; }).length,
+    trending: D.repos.filter(function (r) { return r.td || r.tw; }).length
+  };
+  var countEls = document.querySelectorAll('[data-count]');
+  countEls.forEach(function (el) { el.textContent = animate ? '0' : totals[el.dataset.count].toLocaleString('zh-CN'); });
+
+  var top = D.repos.filter(function (r) { return r.td > 0; }).sort(function (a, b) { return b.td - a.td; }).slice(0, 8);
+  if (top.length) {
+    var maxGain = top[0].td;
+    $('rank').innerHTML = top.map(function (r, i) {
+      return '<li><a href="' + esc(r.u) + '" target="_blank" rel="noopener">' +
+        '<span class="no">' + (i + 1) + '</span>' +
+        '<span class="nm"><b>' + esc(r.n) + '</b><small>' + esc(catName[r.c] || '其他') + (r.d ? ' · ' + esc(r.d) : '') + '</small>' +
+        '<span class="bar"><i style="transform:scaleX(' + (r.td / maxGain).toFixed(3) + ')"></i></span></span>' +
+        '<span class="gain">+' + r.td.toLocaleString('zh-CN') + '</span></a></li>';
+    }).join('');
+    $('boardWrap').hidden = false;
+  }
+
+  /* ---------- 筛选 ---------- */
+  function inRange(r) {
+    if (state.range === 'today') return r.fs === D.today;
+    if (state.range === 'week') return r.fs >= weekAgo;
+    if (state.range === 'trending') return r.td > 0 || r.tw > 0;
+    return true;
+  }
+  function matchQ(r) {
+    if (!state.q) return true;
+    var hay = (r.n + ' ' + r.d + ' ' + r.tp.join(' ') + ' ' + r.l + ' ' + (catName[r.c] || '')).toLowerCase();
+    return state.q.split(/\s+/).every(function (w) { return hay.indexOf(w) >= 0; });
+  }
+  function base() { return D.repos.filter(function (r) { return inRange(r) && matchQ(r) && !(state.hideRead && read[r.n]); }); }
+
+  function renderChips(rows) {
+    var counts = { all: rows.length };
+    rows.forEach(function (r) { counts[r.c] = (counts[r.c] || 0) + 1; });
+    var html = chip('all', '全部', counts.all);
+    D.categories.forEach(function (c) { html += chip(c.id, c.name, counts[c.id] || 0); });
+    $('chips').innerHTML = html;
+  }
+  function chip(id, name, n) {
+    return '<button type="button" class="chip" data-c="' + id + '" aria-pressed="' + (state.cat === id) + '">' + esc(name) + '<small>' + n + '</small></button>';
+  }
+
+  function card(r) {
+    var parts = r.n.split('/');
+    var pills = '';
+    if (r.fs === D.today) pills += '<span class="pill new">新收录</span>';
+    if (r.td) pills += '<span class="pill hot">今日 +' + k(r.td) + '</span>';
+    else if (r.tw) pills += '<span class="pill hot">本周 +' + k(r.tw) + '</span>';
+    var lang = r.l ? '<span class="lang"><i style="background:' + (LANG[r.l] || 'var(--faint)') + '"></i>' + esc(r.l) + '</span>' : '';
+    return '<article class="card' + (read[r.n] ? ' read' : '') + '">' +
+      '<h3><a href="' + esc(r.u) + '" target="_blank" rel="noopener"><span class="owner">' + esc(parts[0]) + ' / </span>' + esc(parts[1]) + '</a></h3>' +
+      '<p class="desc' + (r.d ? '' : ' none') + '">' + (r.d ? esc(r.d) : '没有简介') + '</p>' +
+      '<div class="meta">' + pills + '<span>★ ' + k(r.s) + '</span>' + lang + '<span class="tag">' + esc(catName[r.c] || '其他') + '</span></div>' +
+      '<div class="foot"><span>' + r.fs.slice(5).replace('-', ' 月 ') + ' 日收录</span>' +
+      '<button type="button" class="mark" data-n="' + esc(r.n) + '" aria-pressed="' + !!read[r.n] + '">' + (read[r.n] ? '取消已读' : '标为已读') + '</button></div>' +
+      '</article>';
+  }
+
+  var SORTS = {
+    stars: function (r) { return r.s; },
+    new: function (r) { return r.fs + String(r.s).padStart(9, '0'); },
+    hot: function (r) { return r.td * 100000 + r.tw; },
+    gain: function (r) { return r.g; }
+  };
+
+  function render(opts) {
+    opts = opts || {};
+    var rows = base();
+    renderChips(rows);
+    if (state.cat !== 'all') rows = rows.filter(function (r) { return r.c === state.cat; });
+    var key = SORTS[state.sort] || SORTS.stars;
+    rows.sort(function (a, b) { var x = key(a), y = key(b); return x < y ? 1 : x > y ? -1 : b.s - a.s; });
+    $('count').textContent = '共 ' + rows.length.toLocaleString('zh-CN') + ' 个项目' + (state.cat !== 'all' ? ' · ' + catName[state.cat] : '');
+    var start = opts.append ? state.shown - PAGE : 0;
+    var html = rows.slice(start, state.shown).map(card).join('');
+    if (opts.append) $('list').insertAdjacentHTML('beforeend', html);
+    else $('list').innerHTML = rows.length ? html : '<div class="empty">这个筛选下没有项目，换个分类或时间范围看看。</div>';
+    $('more').hidden = rows.length <= state.shown;
+    if (animate && opts.swap) {
+      var cards = Array.prototype.slice.call($('list').children, start, start + 12);
+      gsap.fromTo(cards, { opacity: 0, y: 6 }, { opacity: 1, y: 0, duration: 0.24, stagger: 0.018, ease: 'power2.out', clearProps: 'transform,opacity' });
+    }
+  }
+
+  /* 分段控件的滑块：只动 transform，240ms */
+  var ind = document.querySelector('#range .ind');
+  function moveIndicator(instant) {
+    var btn = document.querySelector('#range button[aria-pressed="true"]');
+    if (!btn) return;
+    var x = btn.offsetLeft, w = btn.offsetWidth;
+    if (animate && !instant) gsap.to(ind, { x: x, scaleX: w, duration: 0.24, ease: 'power3.inOut' });
+    else if (hasGsap) gsap.set(ind, { x: x, scaleX: w });
+    else ind.style.transform = 'translateX(' + x + 'px) scaleX(' + w + ')';
+  }
+  function syncControls() {
+    document.querySelectorAll('#range button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.v === state.range)); });
+    $('sort').value = state.sort;
+    $('hideRead').checked = state.hideRead;
+  }
+
+  $('chips').addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b || b.dataset.c === state.cat) return;
+    state.cat = b.dataset.c; state.shown = PAGE; save(); render({ swap: true });
+  });
+  $('range').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b || b.dataset.v === state.range) return;
+    state.range = b.dataset.v; state.shown = PAGE;
+    if (state.range === 'trending' && state.sort === 'stars') state.sort = 'hot';
+    if (state.range !== 'trending' && state.sort === 'hot') state.sort = 'stars';
+    syncControls(); moveIndicator(); save(); render({ swap: true });
+  });
+  $('sort').addEventListener('change', function (e) { state.sort = e.target.value; state.shown = PAGE; save(); render({ swap: true }); });
+  $('hideRead').addEventListener('change', function (e) { state.hideRead = e.target.checked; state.shown = PAGE; save(); render(); });
+  var timer;
+  $('q').addEventListener('input', function (e) {
+    clearTimeout(timer);
+    timer = setTimeout(function () { state.q = e.target.value.trim().toLowerCase(); state.shown = PAGE; render(); }, 150);
+  });
+  $('more').addEventListener('click', function () { state.shown += PAGE; render({ append: true, swap: true }); });
+  $('list').addEventListener('click', function (e) {
+    var b = e.target.closest('.mark'); if (!b) return;
+    var n = b.dataset.n;
+    if (read[n]) delete read[n]; else read[n] = 1;
+    try { localStorage.setItem('cx-read', JSON.stringify(read)); } catch (err) {}
+    if (state.hideRead) { render(); return; }
+    var c = b.closest('.card');
+    c.classList.toggle('read', !!read[n]);
+    b.textContent = read[n] ? '取消已读' : '标为已读';
+    b.setAttribute('aria-pressed', String(!!read[n]));
+  });
+
+  /* 筛选栏贴顶时加一条分隔线 */
+  var controls = $('controls');
+  if ('IntersectionObserver' in window) {
+    var sentinel = document.createElement('div');
+    controls.parentNode.insertBefore(sentinel, controls);
+    new IntersectionObserver(function (en) { controls.classList.toggle('stuck', !en[0].isIntersecting); }).observe(sentinel);
+  }
+  window.addEventListener('resize', function () { moveIndicator(true); });
+
+  syncControls();
+  render();
+  moveIndicator(true);
+
+  /* ---------- 首屏入场：只在加载时播放一次，约 1.1 秒 ---------- */
+  if (animate) {
+    var tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
+    tl.from('[data-enter-line]', { yPercent: 105, duration: 0.8, stagger: 0.1 })
+      .from('.hero [data-enter]', { opacity: 0, y: 10, duration: 0.6, stagger: 0.08 }, 0.15)
+      .add(function () {
+        countEls.forEach(function (el) {
+          var o = { v: 0 }, end = totals[el.dataset.count];
+          gsap.to(o, { v: end, duration: 1, ease: 'power2.out', onUpdate: function () { el.textContent = Math.round(o.v).toLocaleString('zh-CN'); } });
+        });
+      }, 0.35)
+      .from('.rank .bar i', { scaleX: 0, duration: 0.7, stagger: 0.04, ease: 'power3.out' }, 0.45);
+  }
+})();
+</script>
+</body>
+</html>

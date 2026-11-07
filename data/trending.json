@@ -1,0 +1,99 @@
+{
+ "date": "2026-11-07",
+ "repos": {
+  "vercel-labs/agent-browser": {
+   "daily": 180,
+   "weekly": 1404
+  },
+  "cloudflare/security-audit-skill": {
+   "daily": 2088
+  },
+  "google/skills": {
+   "daily": 449
+  },
+  "mattpocock/skills": {
+   "daily": 1111,
+   "weekly": 9589
+  },
+  "anthropics/skills": {
+   "daily": 386,
+   "weekly": 3159
+  },
+  "meta/astryx": {
+   "daily": 198
+  },
+  "prometheus/prometheus": {
+   "daily": 325
+  },
+  "sherlock-project/sherlock": {
+   "daily": 1761
+  },
+  "milind-soni/OpenMausBot": {
+   "daily": 1986,
+   "weekly": 6395
+  },
+  "astral-sh/ruff": {
+   "daily": 350
+  },
+  "tailwindlabs/tailwindcss": {
+   "daily": 152
+  },
+  "mbillow/localthings": {
+   "daily": 184
+  },
+  "zed-industries/zed": {
+   "daily": 1119
+  },
+  "ranxianglei/billion-context": {
+   "daily": 185
+  },
+  "dsx-ai-factory/nvke": {
+   "daily": 125
+  },
+  "thedotmack/claude-mem": {
+   "weekly": 8726
+  },
+  "max-sixty/worktrunk": {
+   "weekly": 2184
+  },
+  "Donchitos/Claude-Code-Game-Studios": {
+   "weekly": 6018
+  },
+  "Renhuai123/ziwei-doushu": {
+   "weekly": 5476
+  },
+  "pingdotgg/t3code": {
+   "weekly": 16782
+  },
+  "Nutlope/hallmark": {
+   "weekly": 6900
+  },
+  "D4Vinci/Scrapling": {
+   "weekly": 8372
+  },
+  "calesthio/OpenMontage": {
+   "weekly": 4405
+  },
+  "jakubkrehel/skills": {
+   "weekly": 1921
+  },
+  "hyprwm/Hyprland": {
+   "weekly": 1413
+  },
+  "github/spec-kit": {
+   "weekly": 4202
+  },
+  "obra/superpowers": {
+   "weekly": 4577
+  },
+  "The-PR-Agent/pr-agent": {
+   "weekly": 1523
+  },
+  "pbakaus/impeccable": {
+   "weekly": 8172
+  },
+  "shiyu-coder/Kronos": {
+   "weekly": 2984
+  }
+ }
+}
