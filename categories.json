@@ -11,6 +11,22 @@
     "daily",
     "weekly"
   ],
+  "translate": {
+    "_说明": "把项目简介翻成中文（谷歌翻译免费接口）。只翻新出现或简介改过的项目；翻译失败就保留英文。glossary 是机器翻译常见的错译，翻完自动替换，可以自己加。",
+    "enabled": true,
+    "to": "zh-CN",
+    "batch_chars": 3000,
+    "max_per_run": 3000,
+    "glossary": {
+      "法学硕士": "大模型",
+      "黑曜石": "Obsidian",
+      "克劳德": "Claude",
+      "代理技能": "Agent Skills",
+      "抹布": "RAG",
+      "双子座": "Gemini",
+      "副驾驶": "Copilot"
+    }
+  },
   "overrides": {},
   "categories": [
     {

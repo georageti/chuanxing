@@ -216,6 +216,7 @@ footer a { color: var(--muted); }
         <option value="gain">按收录后涨星</option>
       </select>
       <label class="check"><input type="checkbox" id="hideRead">隐藏已读</label>
+      <label class="check"><input type="checkbox" id="showOrig">看英文原文</label>
     </div>
     <div class="chips" id="chips" role="group" aria-label="分类"></div>
   </div>
@@ -247,17 +248,21 @@ footer a { color: var(--muted); }
   }
 
   var PAGE = 60;
-  var state = { cat: 'all', range: 'all', sort: 'stars', q: '', hideRead: false, shown: PAGE };
+  var state = { cat: 'all', range: 'all', sort: 'stars', q: '', hideRead: false, orig: false, shown: PAGE };
   var read = {};
   try { read = JSON.parse(localStorage.getItem('cx-read') || '{}') || {}; } catch (e) {}
   try {
     var saved = JSON.parse(localStorage.getItem('cx-view') || '{}') || {};
     ['cat', 'range', 'sort'].forEach(function (k) { if (saved[k]) state[k] = saved[k]; });
     state.hideRead = !!saved.hideRead;
+    state.orig = !!saved.orig;
   } catch (e) {}
   function save() {
-    try { localStorage.setItem('cx-view', JSON.stringify({ cat: state.cat, range: state.range, sort: state.sort, hideRead: state.hideRead })); } catch (e) {}
+    try { localStorage.setItem('cx-view', JSON.stringify({ cat: state.cat, range: state.range, sort: state.sort, hideRead: state.hideRead, orig: state.orig })); } catch (e) {}
   }
+  /* 简介默认显示中文翻译（dz），勾选“看英文原文”后显示原文（d）；鼠标停在简介上能看到另一种 */
+  function descText(r) { return (!state.orig && r.dz) ? r.dz : r.d; }
+  function descOther(r) { return (!state.orig && r.dz) ? r.d : (r.dz || ''); }
 
   var catName = {};
   D.categories.forEach(function (c) { catName[c.id] = c.name; });
@@ -285,17 +290,20 @@ footer a { color: var(--muted); }
   countEls.forEach(function (el) { el.textContent = animate ? '0' : totals[el.dataset.count].toLocaleString('zh-CN'); });
 
   var top = D.repos.filter(function (r) { return r.td > 0; }).sort(function (a, b) { return b.td - a.td; }).slice(0, 8);
-  if (top.length) {
+  function renderBoard() {
+    if (!top.length) return;
     var maxGain = top[0].td;
     $('rank').innerHTML = top.map(function (r, i) {
+      var d = descText(r);
       return '<li><a href="' + esc(r.u) + '" target="_blank" rel="noopener">' +
         '<span class="no">' + (i + 1) + '</span>' +
-        '<span class="nm"><b>' + esc(r.n) + '</b><small>' + esc(catName[r.c] || '其他') + (r.d ? ' · ' + esc(r.d) : '') + '</small>' +
+        '<span class="nm"><b>' + esc(r.n) + '</b><small>' + esc(catName[r.c] || '其他') + (d ? ' · ' + esc(d) : '') + '</small>' +
         '<span class="bar"><i style="transform:scaleX(' + (r.td / maxGain).toFixed(3) + ')"></i></span></span>' +
         '<span class="gain">+' + r.td.toLocaleString('zh-CN') + '</span></a></li>';
     }).join('');
     $('boardWrap').hidden = false;
   }
+  renderBoard();
 
   /* ---------- 筛选 ---------- */
   function inRange(r) {
@@ -306,7 +314,7 @@ footer a { color: var(--muted); }
   }
   function matchQ(r) {
     if (!state.q) return true;
-    var hay = (r.n + ' ' + r.d + ' ' + r.tp.join(' ') + ' ' + r.l + ' ' + (catName[r.c] || '')).toLowerCase();
+    var hay = (r.n + ' ' + r.d + ' ' + (r.dz || '') + ' ' + r.tp.join(' ') + ' ' + r.l + ' ' + (catName[r.c] || '')).toLowerCase();
     return state.q.split(/\s+/).every(function (w) { return hay.indexOf(w) >= 0; });
   }
   function base() { return D.repos.filter(function (r) { return inRange(r) && matchQ(r) && !(state.hideRead && read[r.n]); }); }
@@ -331,7 +339,10 @@ footer a { color: var(--muted); }
     var lang = r.l ? '<span class="lang"><i style="background:' + (LANG[r.l] || 'var(--faint)') + '"></i>' + esc(r.l) + '</span>' : '';
     return '<article class="card' + (read[r.n] ? ' read' : '') + '">' +
       '<h3><a href="' + esc(r.u) + '" target="_blank" rel="noopener"><span class="owner">' + esc(parts[0]) + ' / </span>' + esc(parts[1]) + '</a></h3>' +
-      '<p class="desc' + (r.d ? '' : ' none') + '">' + (r.d ? esc(r.d) : '没有简介') + '</p>' +
+      (function () {
+        var d = descText(r), o = descOther(r);
+        return '<p class="desc' + (d ? '' : ' none') + '"' + (o && o !== d ? ' title="' + esc(o) + '"' : '') + '>' + (d ? esc(d) : '没有简介') + '</p>';
+      })() +
       '<div class="meta">' + pills + '<span>★ ' + k(r.s) + '</span>' + lang + '<span class="tag">' + esc(catName[r.c] || '其他') + '</span></div>' +
       '<div class="foot"><span>' + r.fs.slice(5).replace('-', ' 月 ') + ' 日收录</span>' +
       '<button type="button" class="mark" data-n="' + esc(r.n) + '" aria-pressed="' + !!read[r.n] + '">' + (read[r.n] ? '取消已读' : '标为已读') + '</button></div>' +
@@ -378,6 +389,7 @@ footer a { color: var(--muted); }
     document.querySelectorAll('#range button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.v === state.range)); });
     $('sort').value = state.sort;
     $('hideRead').checked = state.hideRead;
+    $('showOrig').checked = state.orig;
   }
 
   $('chips').addEventListener('click', function (e) {
@@ -393,6 +405,7 @@ footer a { color: var(--muted); }
   });
   $('sort').addEventListener('change', function (e) { state.sort = e.target.value; state.shown = PAGE; save(); render({ swap: true }); });
   $('hideRead').addEventListener('change', function (e) { state.hideRead = e.target.checked; state.shown = PAGE; save(); render(); });
+  $('showOrig').addEventListener('change', function (e) { state.orig = e.target.checked; save(); renderBoard(); render(); });
   var timer;
   $('q').addEventListener('input', function (e) {
     clearTimeout(timer);
