@@ -266,25 +266,20 @@ def classify(rec, sources, rules, cfg):
 
 # ---------------------------------------------------------------- 翻译
 #
-# 两个翻译引擎按 categories.json 里 translate.engines 的顺序尝试，前一个不能用就换下一个：
-# - github-models：GitHub 官方的模型接口，在 Actions 里用自带的 GITHUB_TOKEN 免费调用（工作流要有 models: read 权限）。
-#   本机没有 GITHUB_TOKEN，或者 VPN 把 models.github.ai 拦下（只返回 "OK"）时会自动跳过。
-# - google：谷歌翻译的免费接口，用 curl 调用。它会拒绝 Python urllib 的请求，也会拒绝 GitHub Actions 服务器（429）。
-# 都失败就保留英文，下次运行再补。
+# 翻译引擎按 categories.json 里 translate.engines 的顺序尝试，前一个用不了就换下一个，都失败就保留英文：
+# - google：谷歌翻译的免费接口（Chrome 翻译插件用的那个入口），一次请求带多条，按条返回，不会错位。
+#   用 curl 调用：谷歌会拒绝 Python 自带 urllib 的请求。
+# - mymemory：MyMemory 的免费接口，不登录每天约 5000 字符，一条一条翻，作为备用。
+# （GitHub Models 已在 2026 年下线，不再使用。）
 
 CJK = re.compile(r"[一-鿿]")
 SHORTCODE = re.compile(r":[a-z0-9_+-]+:")
-GTX_URL = "https://translate.googleapis.com/translate_a/single"
-MODELS_URL = "https://models.github.ai/inference/chat/completions"
-CATALOG_URL = "https://models.github.ai/catalog/models"
-DEFAULT_MODELS = ["openai/gpt-4.1-mini", "openai/gpt-4o-mini", "openai/gpt-4.1-nano"]
-PROMPT = ("把用户给出的 JSON 数组里的每一条 GitHub 项目简介翻译成简体中文。"
-          "保留产品名、项目名、库名、代码标识符和 emoji；LLM、RAG、MCP、Agent、Skills、Claude、CLI、API、SDK 这类术语保持英文。"
-          "只输出一个 JSON 字符串数组，长度和顺序与输入完全一致，不要任何解释，也不要代码块标记。")
+GOOGLE_URL = "https://clients5.google.com/translate_a/t"
+MYMEMORY_URL = "https://api.mymemory.translated.net/get"
 
 
 class EngineDown(Exception):
-    """这个翻译引擎在本次运行里不能再用了（没有权限、被拦截、额度用完）。"""
+    """这个翻译引擎在本次运行里不能再用了（被拒绝、额度用完）。"""
 
 
 def clean_desc(text):
@@ -296,101 +291,45 @@ def is_chinese(text):
     return len(CJK.findall(text)) >= max(2, len(text) * 0.15)
 
 
-def gtx(lines, to):
-    """谷歌翻译的免费接口，多行一起翻，按换行拆回。"""
-    cmd = ["curl", "-sS", "--fail", "-m", "30", "-G", GTX_URL, "-A", "Mozilla/5.0",
-           "--data-urlencode", "client=gtx", "--data-urlencode", "sl=auto",
-           "--data-urlencode", "tl=" + to, "--data-urlencode", "dt=t",
-           "--data-urlencode", "q=" + "\n".join(lines)]
+def curl_get(url, params):
+    cmd = ["curl", "-sS", "--fail", "-m", "30", "-G", url, "-A", "Mozilla/5.0"]
+    for k, v in params:
+        cmd += ["--data-urlencode", f"{k}={v}"]
     p = subprocess.run(cmd, capture_output=True, text=True)
     if p.returncode != 0:
         msg = (p.stderr or "curl 失败").strip()[:200]
-        if "429" in msg or "403" in msg:
+        if any(code in msg for code in ("429", "403", "401")):
             raise EngineDown(msg)
         raise RuntimeError(msg)
-    data = json.loads(p.stdout)
-    return "".join(seg[0] for seg in data[0] if seg and seg[0]).split("\n")
+    return json.loads(p.stdout)
 
 
 def google_engine(to):
     def run(lines):
-        out = gtx(lines, to)
-        if len(out) != len(lines):  # 行数对不上就逐条翻，避免错位
-            out = []
-            for line in lines:
-                out.append(" ".join(gtx([line], to)))
-                time.sleep(0.3)
+        data = curl_get(GOOGLE_URL, [("client", "dict-chrome-ex"), ("sl", "auto"), ("tl", to)] + [("q", t) for t in lines])
+        if isinstance(data, str):  # 只有一条时可能直接返回字符串
+            data = [data]
+        out = [x[0] if isinstance(x, list) else x for x in data]
+        if len(out) != len(lines) or not all(isinstance(x, str) for x in out):
+            raise RuntimeError("返回的条数对不上")
         return out
     return run
 
 
-class GitHubModels:
-    def __init__(self, prefer):
-        self.prefer = prefer or DEFAULT_MODELS
-        self.model = None
-        self.last = 0.0
-
-    def _request(self, url, body=None, retry=True):
-        headers = {"Authorization": "Bearer " + TOKEN, "Accept": "application/json", "User-Agent": UA}
-        data = None
-        if body is not None:
-            headers["Content-Type"] = "application/json"
-            data = json.dumps(body, ensure_ascii=False).encode("utf-8")
-        req = urllib.request.Request(url, data=data, headers=headers)
-        try:
-            with urllib.request.urlopen(req, timeout=90, context=SSL_CTX) as resp:
-                text = resp.read().decode("utf-8", "replace")
-        except urllib.error.HTTPError as e:
-            detail = e.read().decode("utf-8", "replace")[:200]
-            wait = float(e.headers.get("Retry-After") or 0)
-            if e.code == 429 and retry and wait <= 60:
-                time.sleep(wait or 20)
-                return self._request(url, body, retry=False)
-            if e.code in (401, 403, 404, 429):
-                raise EngineDown(f"HTTP {e.code} {detail}")
-            raise RuntimeError(f"HTTP {e.code} {detail}")
-        except (urllib.error.URLError, TimeoutError) as e:
-            raise RuntimeError(f"网络错误 {e}")
-        try:
-            return json.loads(text)
-        except ValueError:
-            raise EngineDown("返回的不是 JSON（可能被代理拦截）：" + text[:40].strip())
-
-    def pick(self):
-        if self.model:
-            return self.model
-        try:
-            catalog = self._request(CATALOG_URL)
-            ids = {m.get("id") for m in catalog if isinstance(m, dict)} if isinstance(catalog, list) else set()
-        except RuntimeError:
-            ids = set()  # 目录查不到就按顺序直接试
-        for m in self.prefer:
-            if not ids or m in ids:
-                self.model = m
-                break
-        if not self.model:
-            raise EngineDown("模型目录里没有这些候选：" + "、".join(self.prefer))
-        log(f"  用 GitHub Models（{self.model}）翻译")
-        return self.model
-
-    def __call__(self, lines):
-        if not TOKEN:
-            raise EngineDown("没有 GITHUB_TOKEN")
-        model = self.pick()
-        gap = 4.5 - (time.time() - self.last)  # 免费额度大约每分钟 15 次
-        if gap > 0:
-            time.sleep(gap)
-        self.last = time.time()
-        body = {"model": model, "temperature": 0, "messages": [
-            {"role": "system", "content": PROMPT},
-            {"role": "user", "content": json.dumps(lines, ensure_ascii=False)}]}
-        data = self._request(MODELS_URL, body)
-        content = data["choices"][0]["message"]["content"].strip()
-        content = re.sub(r"^```(?:json)?\s*|\s*```$", "", content)
-        out = json.loads(content)
-        if not isinstance(out, list) or len(out) != len(lines) or not all(isinstance(x, str) for x in out):
-            raise RuntimeError("模型没有按格式返回")
+def mymemory_engine(to):
+    def run(lines):
+        out = []
+        for line in lines:
+            data = curl_get(MYMEMORY_URL, [("q", line[:480]), ("langpair", "en|" + to)])
+            text = (data.get("responseData") or {}).get("translatedText") or ""
+            if data.get("quotaFinished") or "MYMEMORY WARNING" in text:
+                raise EngineDown("今天的免费额度用完了")
+            if str(data.get("responseStatus")) != "200" or not text:
+                raise RuntimeError(f"返回异常：{data.get('responseDetails')}")
+            out.append(text)
+            time.sleep(0.5)
         return out
+    return run
 
 
 def translate_db(db, cfg):
@@ -414,12 +353,11 @@ def translate_db(db, cfg):
     if not todo:
         return
 
-    engines = []
-    for eng in tc.get("engines", ["github-models", "google"]):
-        if eng == "github-models":
-            engines.append([eng, GitHubModels(tc.get("models"))])
-        elif eng == "google" and shutil.which("curl"):
-            engines.append([eng, google_engine(to)])
+    if not shutil.which("curl"):
+        log("没有 curl，跳过翻译。")
+        return
+    makers = {"google": google_engine, "mymemory": mymemory_engine}
+    engines = [[eng, makers[eng](to)] for eng in tc.get("engines", ["google", "mymemory"]) if eng in makers]
     if not engines:
         log("没有可用的翻译引擎，跳过翻译。")
         return

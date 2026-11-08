@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  models: read      # 用 GitHub Models 翻译简介
 
 concurrency:
   group: daily-fetch
