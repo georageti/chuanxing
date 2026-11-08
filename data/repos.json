@@ -355,7 +355,7 @@
   "name": "521xueweihan/HelloGitHub",
   "url": "https://github.com/521xueweihan/HelloGitHub",
   "desc": ":octocat: 分享 GitHub 上有趣、入门级的开源项目。Share interesting, entry-level open source projects on GitHub.",
-  "stars": 187512,
+  "stars": 187513,
   "forks": 13230,
   "lang": "Python",
   "topics": [
@@ -833,8 +833,8 @@
   "name": "AgriciDaniel/claude-seo",
   "url": "https://github.com/AgriciDaniel/claude-seo",
   "desc": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
-  "stars": 27298,
-  "forks": 3540,
+  "stars": 27300,
+  "forks": 3541,
   "lang": "Python",
   "topics": [
    "ai",
@@ -1240,7 +1240,7 @@
   "name": "AppFlowy-IO/AppFlowy",
   "url": "https://github.com/AppFlowy-IO/AppFlowy",
   "desc": "Bring projects, wikis, and teams together with AI. AppFlowy is the AI collaborative workspace where you achieve more without losing control of your data. The leading open source Notion alternative.",
-  "stars": 78417,
+  "stars": 78418,
   "forks": 6206,
   "lang": "Dart",
   "topics": [
@@ -2315,7 +2315,7 @@
   "name": "ComposioHQ/awesome-claude-skills",
   "url": "https://github.com/ComposioHQ/awesome-claude-skills",
   "desc": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
-  "stars": 79006,
+  "stars": 79005,
   "forks": 9603,
   "lang": "Python",
   "topics": [
@@ -2439,7 +2439,7 @@
   "name": "D4Vinci/Scrapling",
   "url": "https://github.com/D4Vinci/Scrapling",
   "desc": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
-  "stars": 99397,
+  "stars": 99399,
   "forks": 10409,
   "lang": "Python",
   "topics": [
@@ -2823,7 +2823,7 @@
   "name": "DietrichGebert/ponytail",
   "url": "https://github.com/DietrichGebert/ponytail",
   "desc": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-  "stars": 186470,
+  "stars": 186472,
   "forks": 10325,
   "lang": "JavaScript",
   "topics": [
@@ -2860,7 +2860,7 @@
   "name": "DigitalPlatDev/FreeDomain",
   "url": "https://github.com/DigitalPlatDev/FreeDomain",
   "desc": "Free domain registration and practical DNS learning resources for everyone.",
-  "stars": 207485,
+  "stars": 207486,
   "forks": 4668,
   "lang": "Markdown",
   "topics": [
@@ -2994,7 +2994,7 @@
   "name": "Donchitos/Claude-Code-Game-Studios",
   "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
   "desc": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
-  "stars": 36651,
+  "stars": 36652,
   "forks": 4836,
   "lang": "Shell",
   "topics": [
@@ -3307,7 +3307,7 @@
   "name": "EbookFoundation/free-programming-books",
   "url": "https://github.com/EbookFoundation/free-programming-books",
   "desc": ":books: Freely available programming books",
-  "stars": 401231,
+  "stars": 401233,
   "forks": 67365,
   "lang": "Python",
   "topics": [
@@ -4106,7 +4106,7 @@
   "name": "Gathin23/cleanyourtv",
   "url": "https://github.com/Gathin23/cleanyourtv",
   "desc": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
-  "stars": 53996,
+  "stars": 53997,
   "forks": 6949,
   "lang": "Python",
   "topics": [
@@ -5135,8 +5135,8 @@
   "name": "Jakeschincariol/replica-skill",
   "url": "https://github.com/Jakeschincariol/replica-skill",
   "desc": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
-  "stars": 8254,
-  "forks": 1483,
+  "stars": 8255,
+  "forks": 1484,
   "lang": "Python",
   "topics": [
    "agent",
@@ -5349,7 +5349,7 @@
   "name": "JimLiu/baoyu-design",
   "url": "https://github.com/JimLiu/baoyu-design",
   "desc": "Run Claude Design locally as an Agent Skill — Cursor, Codex, DeepSeek Harness & more. Produce polished UI mockups, prototypes, decks & wireframes as self-contained HTML, without claude.ai/design. Best with Opus or Claude.",
-  "stars": 6217,
+  "stars": 6218,
   "forks": 485,
   "lang": "JavaScript",
   "topics": [
@@ -5540,7 +5540,7 @@
   "name": "JuliusBrussee/caveman",
   "url": "https://github.com/JuliusBrussee/caveman",
   "desc": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
-  "stars": 118188,
+  "stars": 118189,
   "forks": 6871,
   "lang": "Go",
   "topics": [
@@ -5650,7 +5650,7 @@
   "name": "JuneYaooo/rea-video",
   "url": "https://github.com/JuneYaooo/rea-video",
   "desc": "Reverse-engineer any video, shot by shot: tells whether each shot was filmed, AI-generated or coded, how the captions, cuts and audio were made, and how to remake it. 逆向一切视频，逐镜拆出制作方式并给出复刻方案。",
-  "stars": 3749,
+  "stars": 3750,
   "forks": 533,
   "lang": "Python",
   "topics": [
@@ -5723,7 +5723,7 @@
   "name": "JustAResearcher/gpu-unlock-ada",
   "url": "https://github.com/JustAResearcher/gpu-unlock-ada",
   "desc": "GPU tensor unlock source for RTX 4090 and experimental RTX 4070 Ti SUPER; firmware generated locally",
-  "stars": 4834,
+  "stars": 4836,
   "forks": 622,
   "lang": "C",
   "topics": [],
@@ -5790,7 +5790,7 @@
   "name": "KKKKhazix/agent-autoloop",
   "url": "https://github.com/KKKKhazix/agent-autoloop",
   "desc": "让你的命令行 Agent 在后台自己接活、自己跟进到底；平时不烦你，遇到拿不准的事才发卡片找你拍板。",
-  "stars": 3986,
+  "stars": 3988,
   "forks": 723,
   "lang": "TypeScript",
   "topics": [
@@ -6115,8 +6115,8 @@
   "name": "LNPANDY/NX2Apple",
   "url": "https://github.com/LNPANDY/NX2Apple",
   "desc": "Play your own Switch games on iPhone/iPad — one-click macOS app, no terminal. | 把 Switch 游戏装进 iPhone：图形界面一键构建，不用命令行。Bring your own game.",
-  "stars": 5029,
-  "forks": 649,
+  "stars": 5031,
+  "forks": 651,
   "lang": "Swift",
   "topics": [
    "apple-silicon",
@@ -6459,7 +6459,7 @@
   "name": "Leonxlnx/taste-skill",
   "url": "https://github.com/Leonxlnx/taste-skill",
   "desc": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
-  "stars": 111712,
+  "stars": 111713,
   "forks": 7507,
   "lang": "JavaScript",
   "topics": [
@@ -7629,7 +7629,7 @@
   "url": "https://github.com/MunGell/awesome-for-beginners",
   "desc": "A list of awesome beginners-friendly projects.",
   "stars": 91172,
-  "forks": 8069,
+  "forks": 8070,
   "lang": "",
   "topics": [
    "awesome",
@@ -7981,7 +7981,7 @@
   "name": "Nutlope/hallmark",
   "url": "https://github.com/Nutlope/hallmark",
   "desc": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
-  "stars": 50373,
+  "stars": 50376,
   "forks": 2671,
   "lang": "CSS",
   "topics": [],
@@ -8223,7 +8223,7 @@
   "url": "https://github.com/Olshansk/interview",
   "desc": "Everything you need to prepare for your technical interview",
   "stars": 18388,
-  "forks": 3654,
+  "forks": 3655,
   "lang": "",
   "topics": [
    "google-interview",
@@ -8287,6 +8287,8 @@
    "q:skills"
   ],
   "last_seen": "2026-11-08",
+  "desc_zh": "世界上第一个开源的代理视频制作系统。 12 条生产管道、100 多种工具、700 多种Agent Skills和生产知识文件。将您的人工智能编码助手变成一个完整的视频制作工作室。",
+  "desc_zh_src": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
   "category": "ai",
   "tags": [
    "skills",
@@ -9027,7 +9029,7 @@
   "name": "Renhuai123/ziwei-doushu",
   "url": "https://github.com/Renhuai123/ziwei-doushu",
   "desc": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
-  "stars": 16758,
+  "stars": 16760,
   "forks": 3246,
   "lang": "TypeScript",
   "topics": [
@@ -9446,7 +9448,7 @@
   "name": "ScrapeCreators/social-media-research-skills",
   "url": "https://github.com/ScrapeCreators/social-media-research-skills",
   "desc": "AI agent skills for social media research. Outlier posts, comment mining, competitor teardowns, ad libraries & trends across TikTok, Instagram, YouTube, Reddit, X, LinkedIn & more. Powered by ScrapeCreators. Works with Claude Code, Cursor, Codex, Gemini CLI.",
-  "stars": 5949,
+  "stars": 5950,
   "forks": 161,
   "lang": "Python",
   "topics": [
@@ -9622,7 +9624,7 @@
   "name": "Shubhamsaboo/awesome-llm-apps",
   "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
   "desc": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
-  "stars": 144135,
+  "stars": 144134,
   "forks": 21206,
   "lang": "Python",
   "topics": [
@@ -10271,7 +10273,7 @@
   "name": "TencentCloud/TencentDB-Agent-Memory",
   "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
   "desc": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
-  "stars": 30624,
+  "stars": 30625,
   "forks": 2986,
   "lang": "TypeScript",
   "topics": [
@@ -11267,7 +11269,7 @@
   "name": "VoltAgent/awesome-design-md",
   "url": "https://github.com/VoltAgent/awesome-design-md",
   "desc": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
-  "stars": 126051,
+  "stars": 126052,
   "forks": 13956,
   "lang": "",
   "topics": [
@@ -12414,7 +12416,7 @@
   "url": "https://github.com/abhisheknaiidu/awesome-github-profile-readme",
   "desc": "😎 A curated list of awesome GitHub Profile which updates in real time",
   "stars": 31547,
-  "forks": 4547,
+  "forks": 4546,
   "lang": "",
   "topics": [
    "awesome",
@@ -13424,7 +13426,7 @@
   "name": "akullpp/awesome-java",
   "url": "https://github.com/akullpp/awesome-java",
   "desc": "A curated list of awesome frameworks, libraries and software for the Java programming language.",
-  "stars": 49468,
+  "stars": 49467,
   "forks": 7744,
   "lang": "",
   "topics": [
@@ -14573,7 +14575,7 @@
   "name": "amosblomqvist/learnharness",
   "url": "https://github.com/amosblomqvist/learnharness",
   "desc": "Agent harness for learning difficult things.",
-  "stars": 6244,
+  "stars": 6245,
   "forks": 969,
   "lang": "TypeScript",
   "topics": [],
@@ -15052,7 +15054,7 @@
   "name": "anthropics/skills",
   "url": "https://github.com/anthropics/skills",
   "desc": "Public repository for Agent Skills",
-  "stars": 188893,
+  "stars": 188895,
   "forks": 22264,
   "lang": "Python",
   "topics": [
@@ -15434,7 +15436,7 @@
   "name": "arjun988/blender-skills",
   "url": "https://github.com/arjun988/blender-skills",
   "desc": "94 specialist Blender skills for Cursor, Claude Code, Kiro & Codex -> MCP-powered production pipeline from blockout to engine export.",
-  "stars": 2140,
+  "stars": 2142,
   "forks": 183,
   "lang": "TypeScript",
   "topics": [
@@ -16058,7 +16060,7 @@
   "name": "astral-sh/ruff",
   "url": "https://github.com/astral-sh/ruff",
   "desc": "An extremely fast Python linter and code formatter, written in Rust.",
-  "stars": 51012,
+  "stars": 51013,
   "forks": 2633,
   "lang": "Rust",
   "topics": [
@@ -16281,7 +16283,7 @@
   "name": "awesome-dsh-plugin/awesome-dsh-plugin",
   "url": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin",
   "desc": "A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表",
-  "stars": 23607,
+  "stars": 23608,
   "forks": 7305,
   "lang": "JavaScript",
   "topics": [
@@ -16474,7 +16476,7 @@
   "url": "https://github.com/ayghri/i-have-adhd",
   "desc": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
   "stars": 60443,
-  "forks": 3532,
+  "forks": 3533,
   "lang": "Python",
   "topics": [
    "adhd",
@@ -17336,7 +17338,7 @@
   "name": "blader/humanizer",
   "url": "https://github.com/blader/humanizer",
   "desc": "Agent skill that removes signs of AI-generated writing from text",
-  "stars": 66038,
+  "stars": 66040,
   "forks": 5218,
   "lang": "Python",
   "topics": [
@@ -17399,7 +17401,7 @@
   "name": "bobeff/open-source-games",
   "url": "https://github.com/bobeff/open-source-games",
   "desc": "A list of open source games.",
-  "stars": 17835,
+  "stars": 17836,
   "forks": 1640,
   "lang": "Python",
   "topics": [
@@ -17950,7 +17952,7 @@
   "name": "byoungd/up",
   "url": "https://github.com/byoungd/up",
   "desc": "韩先凯的人生进阶指南 AI时代 中英双语终身学习指南：AI、学习 、创业、财富、爱情与人生",
-  "stars": 70256,
+  "stars": 70257,
   "forks": 6981,
   "lang": "JavaScript",
   "topics": [
@@ -18184,8 +18186,8 @@
   "name": "career-ops-hq/career-ops",
   "url": "https://github.com/career-ops-hq/career-ops",
   "desc": "Open-source AI job search agent and job finder: scan job boards, score each job 1-5 against your CV before you apply, tailor an ATS-friendly resume and cover letter, get interview prep and an application tracker. It helps you fill in each application; you press Submit. Runs locally in Codex, OpenCode and other AI CLIs, or as a Claude Code plugin.",
-  "stars": 80968,
-  "forks": 14912,
+  "stars": 80970,
+  "forks": 14913,
   "lang": "JavaScript",
   "topics": [
    "agent-skills",
@@ -18358,7 +18360,7 @@
   "name": "cathrynlavery/diagram-design",
   "url": "https://github.com/cathrynlavery/diagram-design",
   "desc": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-  "stars": 65704,
+  "stars": 65705,
   "forks": 4352,
   "lang": "HTML",
   "topics": [
@@ -18392,7 +18394,7 @@
   "name": "ccch1mneyyy/dsh-Go",
   "url": "https://github.com/ccch1mneyyy/dsh-Go",
   "desc": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
-  "stars": 14718,
+  "stars": 14721,
   "forks": 644,
   "lang": "Dart",
   "topics": [
@@ -18877,8 +18879,8 @@
   "name": "citrolabs/ego-lite",
   "url": "https://github.com/citrolabs/ego-lite",
   "desc": "The fastest browser for AI agents to run browser automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
-  "stars": 22038,
-  "forks": 1248,
+  "stars": 22039,
+  "forks": 1250,
   "lang": "JavaScript",
   "topics": [
    "agent-skills",
@@ -18989,8 +18991,8 @@
   "name": "cloudflare/security-audit-skill",
   "url": "https://github.com/cloudflare/security-audit-skill",
   "desc": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-  "stars": 65944,
-  "forks": 4288,
+  "stars": 65945,
+  "forks": 4289,
   "lang": "JavaScript",
   "topics": [],
   "created": "2026-06-18",
@@ -19124,7 +19126,7 @@
   "name": "codecrafters-io/build-your-own-x",
   "url": "https://github.com/codecrafters-io/build-your-own-x",
   "desc": "Master programming by recreating your favorite technologies from scratch.",
-  "stars": 560833,
+  "stars": 560835,
   "forks": 52472,
   "lang": "Markdown",
   "topics": [
@@ -19387,8 +19389,8 @@
    "q:interview",
    "q:skills"
   ],
-  "desc_zh": "审查代码速度提高 100 倍。 Lens 将每个 PR 绘制为拉取请求本身内的动画架构和数据流演练。将其用作 GitHub 应用程序、GitHub Action、CLI 或编码代理的技能",
-  "desc_zh_src": "Review code 100x faster. Lens draws every PR as animated architecture and data-flow walkthroughs, inside the pull request itself. Use it as a GitHub App, GitHub Action, CLI, or a Skill for your coding agent",
+  "desc_zh": "理解代码的最快方法",
+  "desc_zh_src": "The fastest way to understand code",
   "last_seen": "2026-11-08",
   "category": "skills",
   "tags": [
@@ -21052,7 +21054,7 @@
   "name": "deepseek-ai/DeepInfer",
   "url": "https://github.com/deepseek-ai/DeepInfer",
   "desc": "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
-  "stars": 25618,
+  "stars": 25619,
   "forks": 3138,
   "lang": "Python",
   "topics": [],
@@ -21104,7 +21106,7 @@
   "name": "deepseek-ai/dsh-superagent-prototype",
   "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
   "desc": "Towards a More Autonomous Agent System",
-  "stars": 20895,
+  "stars": 20898,
   "forks": 2472,
   "lang": "TypeScript",
   "topics": [],
@@ -21912,7 +21914,7 @@
   "name": "donnemartin/system-design-primer",
   "url": "https://github.com/donnemartin/system-design-primer",
   "desc": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
-  "stars": 377274,
+  "stars": 377275,
   "forks": 59214,
   "lang": "Python",
   "topics": [
@@ -21953,7 +21955,7 @@
   "url": "https://github.com/doocs/leetcode",
   "desc": "🔥LeetCode solutions in any programming language | 多种编程语言实现 LeetCode、《剑指 Offer（第 2 版）》、《程序员面试金典（第 6 版）》题解",
   "stars": 36756,
-  "forks": 9489,
+  "forks": 9490,
   "lang": "Java",
   "topics": [
    "algorithms",
@@ -23147,7 +23149,7 @@
   "name": "f/prompts.chat",
   "url": "https://github.com/f/prompts.chat",
   "desc": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
-  "stars": 176285,
+  "stars": 176286,
   "forks": 22477,
   "lang": "MDX",
   "topics": [
@@ -24052,8 +24054,8 @@
   "name": "freeCodeCamp/freeCodeCamp",
   "url": "https://github.com/freeCodeCamp/freeCodeCamp",
   "desc": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
-  "stars": 458729,
-  "forks": 48139,
+  "stars": 458730,
+  "forks": 48140,
   "lang": "TypeScript",
   "topics": [
    "careers",
@@ -25024,8 +25026,8 @@
   "name": "github/spec-kit",
   "url": "https://github.com/github/spec-kit",
   "desc": "💫 Toolkit to help you get started with SDD or any other process!",
-  "stars": 148470,
-  "forks": 13341,
+  "stars": 148472,
+  "forks": 13342,
   "lang": "Python",
   "topics": [
    "ai",
@@ -25383,7 +25385,7 @@
   "name": "google/elephant-goldfish-model",
   "url": "https://github.com/google/elephant-goldfish-model",
   "desc": "Open-source plugin for designing and reviewing software with agents",
-  "stars": 14077,
+  "stars": 14081,
   "forks": 1037,
   "lang": "Python",
   "topics": [
@@ -25426,7 +25428,7 @@
   "name": "google/skills",
   "url": "https://github.com/google/skills",
   "desc": "Agent Skills for Google products and technologies",
-  "stars": 23485,
+  "stars": 23486,
   "forks": 1964,
   "lang": "Python",
   "topics": [
@@ -25817,7 +25819,7 @@
   "url": "https://github.com/gsantner/markor",
   "desc": "Text editor - Notes, ToDo & Filemanager (for Android) - Markdown, todo.txt, plaintext, math, ..",
   "stars": 6397,
-  "forks": 563,
+  "forks": 564,
   "lang": "Java",
   "topics": [
    "android-app",
@@ -26505,7 +26507,7 @@
   "name": "hehonghui/awesome-english-ebooks",
   "url": "https://github.com/hehonghui/awesome-english-ebooks",
   "desc": "经济学人(含音频)、纽约客、卫报、连线、大西洋月刊等英语杂志免费下载,支持epub、mobi、pdf格式, 每周更新",
-  "stars": 39268,
+  "stars": 39269,
   "forks": 3286,
   "lang": "CSS",
   "topics": [
@@ -26931,7 +26933,7 @@
   "name": "heydamir/unslop",
   "url": "https://github.com/heydamir/unslop",
   "desc": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
-  "stars": 11444,
+  "stars": 11445,
   "forks": 631,
   "lang": "JavaScript",
   "topics": [],
@@ -27836,8 +27838,8 @@
   "sources": [
    "q:skills"
   ],
-  "desc_zh": "人工智能相关实用程序的集合。欢迎提交pull requests /收藏AI相关的实用工具，欢迎提交pull requests",
-  "desc_zh_src": "Collection of AI-related utilities. Welcome to submit pull requests /收藏AI相关的实用工具，欢迎提交pull requests",
+  "desc_zh": "220+ AI tools across 37+ categories — chatbots, coding agents, AI video/image/voice, open-weight models. Bilingual EN/中文, hand-checked, updated weekly. / 220+ 个 AI 工具、38 个分类，中英双语，AI+人工筛选，每周更新。",
+  "desc_zh_src": "220+ AI tools across 37+ categories — chatbots, coding agents, AI video/image/voice, open-weight models. Bilingual EN/中文, hand-checked, updated weekly. / 220+ 个 AI 工具、38 个分类，中英双语，AI+人工筛选，每周更新。",
   "last_seen": "2026-11-08",
   "category": "ai",
   "tags": [
@@ -29723,7 +29725,7 @@
   "name": "jwasham/coding-interview-university",
   "url": "https://github.com/jwasham/coding-interview-university",
   "desc": "A complete computer science study plan to become a software engineer.",
-  "stars": 364074,
+  "stars": 364075,
   "forks": 85442,
   "lang": "",
   "topics": [
@@ -29859,7 +29861,7 @@
   "name": "kangarooking/cangjie-skill",
   "url": "https://github.com/kangarooking/cangjie-skill",
   "desc": "把书、长视频、播客等高价值内容蒸馏成可执行的 Agent Skills（Distill high-value content from books, long-form videos, podcasts, and more into executable Agent Skills）",
-  "stars": 12323,
+  "stars": 12324,
   "forks": 1448,
   "lang": "Python",
   "topics": [
@@ -30156,7 +30158,7 @@
   "url": "https://github.com/kdn251/interviews",
   "desc": "Everything you need to know to get the job.",
   "stars": 65556,
-  "forks": 12922,
+  "forks": 12923,
   "lang": "Java",
   "topics": [
    "algorithm",
@@ -30877,7 +30879,7 @@
   "name": "l0ng-ai/openidea",
   "url": "https://github.com/l0ng-ai/openidea",
   "desc": "The IDE you know, rebuilt in Rust. IntelliJ IDEA–style keymap, tool windows and search-everywhere in a fast native app: editor, code insight, debugger, Git, terminal, database and HTTP clients for 60+ languages.",
-  "stars": 7683,
+  "stars": 7684,
   "forks": 657,
   "lang": "TypeScript",
   "topics": [
@@ -31015,7 +31017,7 @@
   "name": "larashero3-dotcom/lieflat-charts",
   "url": "https://github.com/larashero3-dotcom/lieflat-charts",
   "desc": "Data visualization Skill for AI Agents, turning data into polished, interactive HTML charts. 面向 AI Agents 的数据可视化 Skill，将数据快速生成精致、可交互的 HTML 图表。",
-  "stars": 6761,
+  "stars": 6762,
   "forks": 412,
   "lang": "HTML",
   "topics": [
@@ -31075,7 +31077,7 @@
   "name": "latent-spaces/brag",
   "url": "https://github.com/latent-spaces/brag",
   "desc": "You built it. Now brag. Turn the project you just created into a short, shareable launch video with one command.",
-  "stars": 20692,
+  "stars": 20693,
   "forks": 1603,
   "lang": "Python",
   "topics": [
@@ -31131,7 +31133,7 @@
    "webdav"
   ],
   "created": "2017-01-16",
-  "pushed": "2026-11-07",
+  "pushed": "2026-11-08",
   "archived": false,
   "first_seen": "2026-11-07",
   "stars_first": 57071,
@@ -31425,7 +31427,7 @@
   "name": "lfnovo/open-notebook",
   "url": "https://github.com/lfnovo/open-notebook",
   "desc": "An Open Source implementation of Notebook LM with more flexibility and features",
-  "stars": 41741,
+  "stars": 41742,
   "forks": 4797,
   "lang": "TypeScript",
   "topics": [
@@ -32171,7 +32173,7 @@
   "name": "ljagiello/ctf-skills",
   "url": "https://github.com/ljagiello/ctf-skills",
   "desc": "Agent skills for solving CTF challenges - web exploitation, binary pwn, crypto, reverse engineering, forensics, OSINT, and more",
-  "stars": 3648,
+  "stars": 3649,
   "forks": 434,
   "lang": "Python",
   "topics": [
@@ -32669,7 +32671,7 @@
   "name": "luongnv89/claude-howto",
   "url": "https://github.com/luongnv89/claude-howto",
   "desc": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
-  "stars": 46713,
+  "stars": 46714,
   "forks": 5717,
   "lang": "Python",
   "topics": [
@@ -32880,7 +32882,7 @@
   "name": "m3y54m/Embedded-Engineering-Roadmap",
   "url": "https://github.com/m3y54m/Embedded-Engineering-Roadmap",
   "desc": "Comprehensive roadmap for aspiring Embedded Systems Engineers, featuring a curated list of learning resources",
-  "stars": 13827,
+  "stars": 13828,
   "forks": 1361,
   "lang": "JavaScript",
   "topics": [
@@ -33346,7 +33348,7 @@
   "name": "mattpocock/skills",
   "url": "https://github.com/mattpocock/skills",
   "desc": "Skills for Real Engineers. Straight from my .agents directory.",
-  "stars": 317852,
+  "stars": 317853,
   "forks": 26593,
   "lang": "Shell",
   "topics": [],
@@ -33371,7 +33373,7 @@
   "name": "max-sixty/worktrunk",
   "url": "https://github.com/max-sixty/worktrunk",
   "desc": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
-  "stars": 11975,
+  "stars": 11976,
   "forks": 465,
   "lang": "Rust",
   "topics": [
@@ -33403,7 +33405,7 @@
   "name": "mbillow/localthings",
   "url": "https://github.com/mbillow/localthings",
   "desc": "Control your Samsung appliances from Home Assistant over your home network, with no cloud account.",
-  "stars": 1089,
+  "stars": 1091,
   "forks": 113,
   "lang": "Python",
   "topics": [
@@ -33689,8 +33691,8 @@
   "name": "meta/astryx",
   "url": "https://github.com/meta/astryx",
   "desc": "An open source design system that's fully customizable and agent ready",
-  "stars": 14683,
-  "forks": 1202,
+  "stars": 14686,
+  "forks": 1203,
   "lang": "TypeScript",
   "topics": [],
   "created": "2026-01-09",
@@ -34594,8 +34596,8 @@
   "name": "milind-soni/OpenMausBot",
   "url": "https://github.com/milind-soni/OpenMausBot",
   "desc": "Open-source Grok Bot alternative with a virtual machine that bots can use",
-  "stars": 17195,
-  "forks": 2427,
+  "stars": 17198,
+  "forks": 2429,
   "lang": "TypeScript",
   "topics": [
    "ai-agents",
@@ -34692,7 +34694,7 @@
   "name": "miss-mumu/developer2gwy",
   "url": "https://github.com/miss-mumu/developer2gwy",
   "desc": "公务员从入门到上岸，最佳程序员公考实践教程",
-  "stars": 11487,
+  "stars": 11488,
   "forks": 1041,
   "lang": "",
   "topics": [
@@ -35081,8 +35083,8 @@
   "name": "morluto/rea",
   "url": "https://github.com/morluto/rea",
   "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-  "stars": 441433,
-  "forks": 109211,
+  "stars": 441440,
+  "forks": 109212,
   "lang": "TypeScript",
   "topics": [
    "agent-skills",
@@ -35683,7 +35685,7 @@
   "name": "mvschwarz/openrig",
   "url": "https://github.com/mvschwarz/openrig",
   "desc": "Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",
-  "stars": 8731,
+  "stars": 8732,
   "forks": 733,
   "lang": "TypeScript",
   "topics": [
@@ -36011,6 +36013,8 @@
    "rising"
   ],
   "last_seen": "2026-11-08",
+  "desc_zh": "在 Windows、macOS、Linux 和 Android 上同时使用所有互联网连接：通过 Wi-Fi、以太网、移动数据和电话网络实现每个连接的负载平衡",
+  "desc_zh_src": "Use all your internet connections at once on Windows, macOS, Linux and Android: per-connection load balancing over Wi-Fi, Ethernet, mobile data and phone tethers",
   "category": "devtools",
   "tags": [
    "devtools"
@@ -36242,7 +36246,7 @@
   "name": "nilbuild/developer-roadmap",
   "url": "https://github.com/nilbuild/developer-roadmap",
   "desc": "Interactive roadmaps, guides and other educational content to help developers grow in their careers.",
-  "stars": 371499,
+  "stars": 371500,
   "forks": 45478,
   "lang": "TypeScript",
   "topics": [
@@ -36758,7 +36762,7 @@
   "name": "obra/superpowers",
   "url": "https://github.com/obra/superpowers",
   "desc": "An agentic skills framework & software development methodology that works.",
-  "stars": 314179,
+  "stars": 314181,
   "forks": 27958,
   "lang": "Shell",
   "topics": [
@@ -36958,7 +36962,7 @@
   "name": "oil-oil/oil-ui",
   "url": "https://github.com/oil-oil/oil-ui",
   "desc": "UI design skill for Claude Code, Codex and other AI agents: explore distinct directions, compare them side by side, refine against real screenshots. 给 AI Agent 用的 UI 设计 Skill。",
-  "stars": 2914,
+  "stars": 2915,
   "forks": 165,
   "lang": "Python",
   "topics": [
@@ -37817,8 +37821,8 @@
   "name": "paperclipai/paperclip",
   "url": "https://github.com/paperclipai/paperclip",
   "desc": "The open-source app everyone uses to manage agents at work",
-  "stars": 112070,
-  "forks": 18577,
+  "stars": 112072,
+  "forks": 18579,
   "lang": "TypeScript",
   "topics": [
    "acpx",
@@ -38039,8 +38043,8 @@
   "sources": [
    "q:skills"
   ],
-  "desc_zh": "开源 3D 建筑编辑器，具有本地 CLI、MCP 工具以及适用于人类和 AI 代理的实用工作流程。",
-  "desc_zh_src": "Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents.",
+  "desc_zh": "适用于 AECO、扫描到 BIM 的开源 3D 建筑软件。代理友好、浏览器优先、MCP、CLI。",
+  "desc_zh_src": "Open-source 3D architecture software for AECO, scan-to-BIM. Agent-friendly, browser-first, MCP, CLI.",
   "last_seen": "2026-11-08",
   "category": "skills",
   "tags": [
@@ -38156,7 +38160,7 @@
   "name": "pbakaus/impeccable",
   "url": "https://github.com/pbakaus/impeccable",
   "desc": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
-  "stars": 105656,
+  "stars": 105658,
   "forks": 6277,
   "lang": "Rust",
   "topics": [
@@ -38342,7 +38346,7 @@
   "name": "pengchujin/aerial-tv",
   "url": "https://github.com/pengchujin/aerial-tv",
   "desc": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面，没有广告，开机自动接管。A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
-  "stars": 10603,
+  "stars": 10604,
   "forks": 897,
   "lang": "Kotlin",
   "topics": [],
@@ -38814,7 +38818,7 @@
   "name": "pingdotgg/t3code",
   "url": "https://github.com/pingdotgg/t3code",
   "desc": "",
-  "stars": 51443,
+  "stars": 51445,
   "forks": 9899,
   "lang": "TypeScript",
   "topics": [],
@@ -39025,7 +39029,7 @@
   "name": "practical-tutorials/project-based-learning",
   "url": "https://github.com/practical-tutorials/project-based-learning",
   "desc": "Curated list of project-based tutorials",
-  "stars": 289306,
+  "stars": 289307,
   "forks": 36826,
   "lang": "Python",
   "topics": [
@@ -39266,7 +39270,7 @@
   "name": "prometheus/prometheus",
   "url": "https://github.com/prometheus/prometheus",
   "desc": "The Prometheus monitoring system and time series database.",
-  "stars": 67473,
+  "stars": 67474,
   "forks": 11009,
   "lang": "Go",
   "topics": [
@@ -39481,7 +39485,7 @@
   "name": "punkpeye/awesome-mcp-servers",
   "url": "https://github.com/punkpeye/awesome-mcp-servers",
   "desc": "A collection of MCP servers.",
-  "stars": 97450,
+  "stars": 97449,
   "forks": 19436,
   "lang": "",
   "topics": [
@@ -39661,8 +39665,8 @@
   "name": "qybaihe/bla",
   "url": "https://github.com/qybaihe/bla",
   "desc": "🛡️ BLA (Blind LLM Agents) — Adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against AI reverse-engineering agents like REA. Poison -> Exhaust -> Hallucinate.",
-  "stars": 2919,
-  "forks": 368,
+  "stars": 2921,
+  "forks": 369,
   "lang": "TypeScript",
   "topics": [
    "adversarial-ai",
@@ -39685,6 +39689,8 @@
    "rising"
   ],
   "last_seen": "2026-11-08",
+  "desc_zh": "🛡️ BLA（Blind LLM Agents）——对抗性防御盾，保护二进制文件、Electron 应用程序、JS 包、Python 和 WebAssembly 免受 REA 等 AI 逆向工程代理的攻击。中毒->排气->产生幻觉。",
+  "desc_zh_src": "🛡️ BLA (Blind LLM Agents) — Adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against AI reverse-engineering agents like REA. Poison -> Exhaust -> Hallucinate.",
   "category": "ai",
   "tags": [
    "ai"
@@ -39884,8 +39890,8 @@
   "name": "ranxianglei/billion-context",
   "url": "https://github.com/ranxianglei/billion-context",
   "desc": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
-  "stars": 4685,
-  "forks": 373,
+  "stars": 4686,
+  "forks": 375,
   "lang": "TypeScript",
   "topics": [
    "dsh-plugin"
@@ -40150,7 +40156,7 @@
   "url": "https://github.com/remotion-dev/skills",
   "desc": "Agent Skills",
   "stars": 6556,
-  "forks": 716,
+  "forks": 717,
   "lang": "TypeScript",
   "topics": [],
   "created": "2026-01-19",
@@ -40782,7 +40788,7 @@
   "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
   "desc": "Learn AI Engineering! Learn it. Build it. Ship it for others.",
   "stars": 77579,
-  "forks": 13750,
+  "forks": 13751,
   "lang": "Python",
   "topics": [
    "agents",
@@ -41659,8 +41665,8 @@
   "name": "scenario-labs/skills",
   "url": "https://github.com/scenario-labs/skills",
   "desc": "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.",
-  "stars": 3510,
-  "forks": 303,
+  "stars": 3512,
+  "forks": 304,
   "lang": "Python",
   "topics": [
    "3d-models",
@@ -41770,8 +41776,8 @@
   "name": "seedds/nxnative",
   "url": "https://github.com/seedds/nxnative",
   "desc": "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
-  "stars": 13428,
-  "forks": 2315,
+  "stars": 13429,
+  "forks": 2316,
   "lang": "Python",
   "topics": [],
   "created": "2026-10-13",
@@ -42139,8 +42145,8 @@
   "name": "sherlock-project/sherlock",
   "url": "https://github.com/sherlock-project/sherlock",
   "desc": "Hunt down social media accounts by username across social networks",
-  "stars": 100874,
-  "forks": 11921,
+  "stars": 100884,
+  "forks": 11923,
   "lang": "Python",
   "topics": [
    "cli",
@@ -42253,7 +42259,7 @@
   "url": "https://github.com/shiyu-coder/Kronos",
   "desc": "Kronos: A Foundation Model for the Language of Financial Markets",
   "stars": 47269,
-  "forks": 7812,
+  "forks": 7813,
   "lang": "Python",
   "topics": [],
   "created": "2025-07-01",
@@ -42592,7 +42598,7 @@
   "name": "sindresorhus/awesome",
   "url": "https://github.com/sindresorhus/awesome",
   "desc": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
-  "stars": 533316,
+  "stars": 533319,
   "forks": 38220,
   "lang": "",
   "topics": [
@@ -43695,8 +43701,8 @@
   "name": "storytold/craft-anything",
   "url": "https://github.com/storytold/craft-anything",
   "desc": "Craft Anything: understand how any software works, and craft your own.",
-  "stars": 21017,
-  "forks": 4063,
+  "stars": 21030,
+  "forks": 4067,
   "lang": "Rust",
   "topics": [],
   "created": "2026-10-31",
@@ -44231,7 +44237,7 @@
   "name": "tailwindlabs/tailwindcss",
   "url": "https://github.com/tailwindlabs/tailwindcss",
   "desc": "A utility-first CSS framework for rapid UI development.",
-  "stars": 98532,
+  "stars": 98536,
   "forks": 7114,
   "lang": "TypeScript",
   "topics": [
@@ -44439,7 +44445,7 @@
   "name": "tanweai/pua",
   "url": "https://github.com/tanweai/pua",
   "desc": "你是一个曾经被寄予厚望的 P8 级工程师。Anthropic 当初给你定级的时候，对你的期望是很高的。  一个agent使用的高能动性的skill。  Your AI has been placed on a PIP. 30 days to show improvement.",
-  "stars": 19816,
+  "stars": 19815,
   "forks": 1199,
   "lang": "Python",
   "topics": [
@@ -44964,7 +44970,7 @@
   "name": "thedotmack/claude-mem",
   "url": "https://github.com/thedotmack/claude-mem",
   "desc": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-  "stars": 114564,
+  "stars": 114565,
   "forks": 9938,
   "lang": "TypeScript",
   "topics": [
@@ -45900,7 +45906,7 @@
   "name": "trimstray/the-book-of-secret-knowledge",
   "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
   "desc": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.",
-  "stars": 256712,
+  "stars": 256714,
   "forks": 14816,
   "lang": "",
   "topics": [
@@ -46018,8 +46024,8 @@
   "name": "tt-a1i/archify",
   "url": "https://github.com/tt-a1i/archify",
   "desc": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
-  "stars": 94515,
-  "forks": 6438,
+  "stars": 94517,
+  "forks": 6439,
   "lang": "JavaScript",
   "topics": [
    "agent-skills",
@@ -46605,7 +46611,7 @@
   "name": "valentderah/totk-pc-recomp",
   "url": "https://github.com/valentderah/totk-pc-recomp",
   "desc": "Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.",
-  "stars": 5727,
+  "stars": 5728,
   "forks": 468,
   "lang": "C",
   "topics": [
@@ -46679,8 +46685,8 @@
   "name": "vercel-labs/agent-browser",
   "url": "https://github.com/vercel-labs/agent-browser",
   "desc": "Browser automation CLI for AI agents",
-  "stars": 46942,
-  "forks": 3219,
+  "stars": 46944,
+  "forks": 3220,
   "lang": "Rust",
   "topics": [],
   "created": "2026-01-11",
@@ -46870,7 +46876,7 @@
   "name": "vinta/awesome-python",
   "url": "https://github.com/vinta/awesome-python",
   "desc": "The definitive list that answers \"I want to do X in Python, which tool should I use?\"",
-  "stars": 333263,
+  "stars": 333264,
   "forks": 29063,
   "lang": "Python",
   "topics": [
@@ -48820,6 +48826,8 @@
    "q:awesome"
   ],
   "last_seen": "2026-11-08",
+  "desc_zh": "使用 Claude Opus 5.5 制作的病毒视频及其背后的提示不断增多。在 Skillry 上观看每部原著和现场重制版。定期更新。",
+  "desc_zh_src": "A growing collection of viral videos made with Claude Opus 5.5 and the prompts behind them. Watch each original next to a live remake on Skillry. Updated regularly.",
   "category": "awesome",
   "tags": [
    "awesome",
@@ -49402,7 +49410,7 @@
   "name": "zergtant/pytorch-handbook",
   "url": "https://github.com/zergtant/pytorch-handbook",
   "desc": "pytorch handbook是一本开源的书籍，目标是帮助那些希望和使用PyTorch进行深度学习开发和研究的朋友快速入门，其中包含的Pytorch教程全部通过测试保证可以成功运行",
-  "stars": 21738,
+  "stars": 21739,
   "forks": 5385,
   "lang": "Jupyter Notebook",
   "topics": [
@@ -49798,7 +49806,7 @@
   "name": "zortos293/Lichii",
   "url": "https://github.com/zortos293/Lichii",
   "desc": "VERY experimental Nintendo Switch 2 emulator",
-  "stars": 5872,
+  "stars": 5877,
   "forks": 890,
   "lang": "C++",
   "topics": [],
