@@ -2,8 +2,8 @@
 
 每天自动收集 GitHub 上的高 star 项目，并按用途分类：Claude 和 Agent Skills、面试与刷题、学习路径和路线图、学习方法与效率、教程与课程、资源合集、AI 工具与应用、开发者工具、其他。
 
-[![进入网站](https://img.shields.io/badge/%E8%BF%9B%E5%85%A5-%E7%BD%91%E7%AB%99-1f6b3a?style=for-the-badge)](https://georageti.github.io/chuanxing/)
-[![每日日报](https://img.shields.io/badge/%E6%AF%8F%E6%97%A5-%E6%97%A5%E6%8A%A5-555555?style=for-the-badge)](daily/)
+[![进入网站](assets/btn-site.svg)](https://georageti.github.io/chuanxing/)
+[![每日日报](assets/btn-daily.svg)](daily/)
 
 - 网页：<https://georageti.github.io/chuanxing/>（每天北京时间 8 点左右自动更新）
 - 每日日报：[daily/](daily/)
