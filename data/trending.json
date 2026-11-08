@@ -1,99 +1,99 @@
 {
- "date": "2026-11-07",
+ "date": "2026-11-08",
  "repos": {
   "vercel-labs/agent-browser": {
-   "daily": 180,
-   "weekly": 1404
+   "daily": 190,
+   "weekly": 1476
   },
   "cloudflare/security-audit-skill": {
-   "daily": 2088
+   "daily": 2085
   },
   "google/skills": {
-   "daily": 449
+   "daily": 443
   },
   "mattpocock/skills": {
-   "daily": 1111,
-   "weekly": 9589
+   "daily": 1100,
+   "weekly": 9664
   },
   "anthropics/skills": {
-   "daily": 386,
-   "weekly": 3159
+   "daily": 390,
+   "weekly": 2796
   },
   "meta/astryx": {
-   "daily": 198
+   "daily": 96
   },
   "prometheus/prometheus": {
-   "daily": 325
+   "daily": 322
   },
   "sherlock-project/sherlock": {
-   "daily": 1761
+   "daily": 1766
   },
   "milind-soni/OpenMausBot": {
-   "daily": 1986,
-   "weekly": 6395
+   "daily": 1955,
+   "weekly": 7077
   },
   "astral-sh/ruff": {
    "daily": 350
   },
   "tailwindlabs/tailwindcss": {
-   "daily": 152
+   "daily": 122
   },
   "mbillow/localthings": {
-   "daily": 184
+   "daily": 186
   },
   "zed-industries/zed": {
-   "daily": 1119
+   "daily": 1114
   },
   "ranxianglei/billion-context": {
-   "daily": 185
+   "daily": 191
   },
   "dsx-ai-factory/nvke": {
-   "daily": 125
+   "daily": 123
   },
   "thedotmack/claude-mem": {
-   "weekly": 8726
+   "weekly": 7482
   },
   "max-sixty/worktrunk": {
-   "weekly": 2184
+   "weekly": 2292
   },
   "Donchitos/Claude-Code-Game-Studios": {
-   "weekly": 6018
+   "weekly": 5719
   },
   "Renhuai123/ziwei-doushu": {
-   "weekly": 5476
+   "weekly": 4906
   },
   "pingdotgg/t3code": {
-   "weekly": 16782
+   "weekly": 17100
   },
   "Nutlope/hallmark": {
-   "weekly": 6900
+   "weekly": 6624
   },
   "D4Vinci/Scrapling": {
-   "weekly": 8372
+   "weekly": 8712
   },
   "calesthio/OpenMontage": {
-   "weekly": 4405
+   "weekly": 4369
   },
   "jakubkrehel/skills": {
-   "weekly": 1921
+   "weekly": 1938
   },
   "hyprwm/Hyprland": {
-   "weekly": 1413
+   "weekly": 1436
   },
   "github/spec-kit": {
-   "weekly": 4202
+   "weekly": 4280
   },
   "obra/superpowers": {
-   "weekly": 4577
+   "weekly": 4466
   },
   "The-PR-Agent/pr-agent": {
-   "weekly": 1523
+   "weekly": 1576
   },
   "pbakaus/impeccable": {
-   "weekly": 8172
+   "weekly": 7623
   },
   "shiyu-coder/Kronos": {
-   "weekly": 2984
+   "weekly": 2937
   }
  }
 }
