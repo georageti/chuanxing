@@ -265,10 +265,26 @@ def classify(rec, sources, rules, cfg):
 
 
 # ---------------------------------------------------------------- 翻译
+#
+# 两个翻译引擎按 categories.json 里 translate.engines 的顺序尝试，前一个不能用就换下一个：
+# - github-models：GitHub 官方的模型接口，在 Actions 里用自带的 GITHUB_TOKEN 免费调用（工作流要有 models: read 权限）。
+#   本机没有 GITHUB_TOKEN，或者 VPN 把 models.github.ai 拦下（只返回 "OK"）时会自动跳过。
+# - google：谷歌翻译的免费接口，用 curl 调用。它会拒绝 Python urllib 的请求，也会拒绝 GitHub Actions 服务器（429）。
+# 都失败就保留英文，下次运行再补。
 
-CJK = re.compile(r"[\u4e00-\u9fff]")
+CJK = re.compile(r"[一-鿿]")
 SHORTCODE = re.compile(r":[a-z0-9_+-]+:")
 GTX_URL = "https://translate.googleapis.com/translate_a/single"
+MODELS_URL = "https://models.github.ai/inference/chat/completions"
+CATALOG_URL = "https://models.github.ai/catalog/models"
+DEFAULT_MODELS = ["openai/gpt-4.1-mini", "openai/gpt-4o-mini", "openai/gpt-4.1-nano"]
+PROMPT = ("把用户给出的 JSON 数组里的每一条 GitHub 项目简介翻译成简体中文。"
+          "保留产品名、项目名、库名、代码标识符和 emoji；LLM、RAG、MCP、Agent、Skills、Claude、CLI、API、SDK 这类术语保持英文。"
+          "只输出一个 JSON 字符串数组，长度和顺序与输入完全一致，不要任何解释，也不要代码块标记。")
+
+
+class EngineDown(Exception):
+    """这个翻译引擎在本次运行里不能再用了（没有权限、被拦截、额度用完）。"""
 
 
 def clean_desc(text):
@@ -281,16 +297,100 @@ def is_chinese(text):
 
 
 def gtx(lines, to):
-    """谷歌翻译的免费接口。用 curl 发请求：这个接口会拒绝 Python 自带 urllib 的请求（429）。"""
+    """谷歌翻译的免费接口，多行一起翻，按换行拆回。"""
     cmd = ["curl", "-sS", "--fail", "-m", "30", "-G", GTX_URL, "-A", "Mozilla/5.0",
            "--data-urlencode", "client=gtx", "--data-urlencode", "sl=auto",
            "--data-urlencode", "tl=" + to, "--data-urlencode", "dt=t",
            "--data-urlencode", "q=" + "\n".join(lines)]
     p = subprocess.run(cmd, capture_output=True, text=True)
     if p.returncode != 0:
-        raise RuntimeError((p.stderr or "curl 失败").strip()[:200])
+        msg = (p.stderr or "curl 失败").strip()[:200]
+        if "429" in msg or "403" in msg:
+            raise EngineDown(msg)
+        raise RuntimeError(msg)
     data = json.loads(p.stdout)
     return "".join(seg[0] for seg in data[0] if seg and seg[0]).split("\n")
+
+
+def google_engine(to):
+    def run(lines):
+        out = gtx(lines, to)
+        if len(out) != len(lines):  # 行数对不上就逐条翻，避免错位
+            out = []
+            for line in lines:
+                out.append(" ".join(gtx([line], to)))
+                time.sleep(0.3)
+        return out
+    return run
+
+
+class GitHubModels:
+    def __init__(self, prefer):
+        self.prefer = prefer or DEFAULT_MODELS
+        self.model = None
+        self.last = 0.0
+
+    def _request(self, url, body=None, retry=True):
+        headers = {"Authorization": "Bearer " + TOKEN, "Accept": "application/json", "User-Agent": UA}
+        data = None
+        if body is not None:
+            headers["Content-Type"] = "application/json"
+            data = json.dumps(body, ensure_ascii=False).encode("utf-8")
+        req = urllib.request.Request(url, data=data, headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=90, context=SSL_CTX) as resp:
+                text = resp.read().decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode("utf-8", "replace")[:200]
+            wait = float(e.headers.get("Retry-After") or 0)
+            if e.code == 429 and retry and wait <= 60:
+                time.sleep(wait or 20)
+                return self._request(url, body, retry=False)
+            if e.code in (401, 403, 404, 429):
+                raise EngineDown(f"HTTP {e.code} {detail}")
+            raise RuntimeError(f"HTTP {e.code} {detail}")
+        except (urllib.error.URLError, TimeoutError) as e:
+            raise RuntimeError(f"网络错误 {e}")
+        try:
+            return json.loads(text)
+        except ValueError:
+            raise EngineDown("返回的不是 JSON（可能被代理拦截）：" + text[:40].strip())
+
+    def pick(self):
+        if self.model:
+            return self.model
+        try:
+            catalog = self._request(CATALOG_URL)
+            ids = {m.get("id") for m in catalog if isinstance(m, dict)} if isinstance(catalog, list) else set()
+        except RuntimeError:
+            ids = set()  # 目录查不到就按顺序直接试
+        for m in self.prefer:
+            if not ids or m in ids:
+                self.model = m
+                break
+        if not self.model:
+            raise EngineDown("模型目录里没有这些候选：" + "、".join(self.prefer))
+        log(f"  用 GitHub Models（{self.model}）翻译")
+        return self.model
+
+    def __call__(self, lines):
+        if not TOKEN:
+            raise EngineDown("没有 GITHUB_TOKEN")
+        model = self.pick()
+        gap = 4.5 - (time.time() - self.last)  # 免费额度大约每分钟 15 次
+        if gap > 0:
+            time.sleep(gap)
+        self.last = time.time()
+        body = {"model": model, "temperature": 0, "messages": [
+            {"role": "system", "content": PROMPT},
+            {"role": "user", "content": json.dumps(lines, ensure_ascii=False)}]}
+        data = self._request(MODELS_URL, body)
+        content = data["choices"][0]["message"]["content"].strip()
+        content = re.sub(r"^```(?:json)?\s*|\s*```$", "", content)
+        out = json.loads(content)
+        if not isinstance(out, list) or len(out) != len(lines) or not all(isinstance(x, str) for x in out):
+            raise RuntimeError("模型没有按格式返回")
+        return out
 
 
 def translate_db(db, cfg):
@@ -313,8 +413,15 @@ def translate_db(db, cfg):
     todo = todo[: tc.get("max_per_run", 3000)]
     if not todo:
         return
-    if not shutil.which("curl"):
-        log("没有 curl，跳过翻译。")
+
+    engines = []
+    for eng in tc.get("engines", ["github-models", "google"]):
+        if eng == "github-models":
+            engines.append([eng, GitHubModels(tc.get("models"))])
+        elif eng == "google" and shutil.which("curl"):
+            engines.append([eng, google_engine(to)])
+    if not engines:
+        log("没有可用的翻译引擎，跳过翻译。")
         return
     log(f"翻译 {len(todo)} 条简介…")
 
@@ -326,7 +433,7 @@ def translate_db(db, cfg):
 
     batches, cur, size = [], [], 0
     for item in todo:
-        if cur and size + len(item[1]) + 1 > tc.get("batch_chars", 3000):
+        if cur and (size + len(item[1]) + 1 > tc.get("batch_chars", 3000) or len(cur) >= tc.get("batch_items", 40)):
             batches.append(cur)
             cur, size = [], 0
         cur.append(item)
@@ -334,28 +441,32 @@ def translate_db(db, cfg):
     if cur:
         batches.append(cur)
 
-    done, fails = 0, 0
+    used, failed_batches = {}, 0
     for batch in batches:
-        try:
-            out = gtx([src for _, src in batch], to)
-            if len(out) != len(batch):  # 行数对不上就逐条翻，避免错位
-                out = []
-                for _, src in batch:
-                    out.append(" ".join(gtx([src], to)))
-                    time.sleep(0.3)
-        except Exception as e:
-            fails += 1
-            log(f"  翻译失败：{e}")
-            if fails >= 3:
-                log("  翻译接口连续失败，剩下的下次运行再翻。")
+        lines, out = [src for _, src in batch], None
+        for slot in list(engines):
+            name, run = slot
+            try:
+                out = run(lines)
+                used[name] = used.get(name, 0) + len(batch)
+                break
+            except EngineDown as e:
+                log(f"  {name} 用不了：{e}；换下一个")
+                engines.remove(slot)
+            except Exception as e:
+                log(f"  {name} 这一批失败：{e}")
+        if out is None:
+            failed_batches += 1
+            if not engines or failed_batches >= 3:
+                log("  翻译引擎都用不了，剩下的下次运行再翻。")
                 break
             time.sleep(3)
             continue
         for (name, src), zh in zip(batch, out):
             db[name]["desc_zh"], db[name]["desc_zh_src"] = fix(zh), src
-        done += len(batch)
-        time.sleep(1)
-    log(f"  翻译完成 {done} 条。")
+        time.sleep(0.5)
+    summary = "，".join(f"{k} {v} 条" for k, v in used.items()) or "0 条"
+    log(f"  翻译完成：{summary}。")
 
 
 def desc_of(r):

@@ -12,10 +12,20 @@
     "weekly"
   ],
   "translate": {
-    "_说明": "把项目简介翻成中文（谷歌翻译免费接口）。只翻新出现或简介改过的项目；翻译失败就保留英文。glossary 是机器翻译常见的错译，翻完自动替换，可以自己加。",
+    "_说明": "把项目简介翻成中文。engines 按顺序尝试：github-models 是 GitHub 官方模型接口（在 Actions 里免费，用 models 里第一个可用的模型），google 是谷歌翻译免费接口（本机能用，GitHub 服务器会被拒）。只翻新出现或简介改过的项目；都失败就保留英文。glossary 是常见错译，翻完自动替换，可以自己加。",
     "enabled": true,
     "to": "zh-CN",
+    "engines": [
+      "github-models",
+      "google"
+    ],
+    "models": [
+      "openai/gpt-4.1-mini",
+      "openai/gpt-4o-mini",
+      "openai/gpt-4.1-nano"
+    ],
     "batch_chars": 3000,
+    "batch_items": 40,
     "max_per_run": 3000,
     "glossary": {
       "法学硕士": "大模型",

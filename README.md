@@ -17,7 +17,8 @@
 
 项目简介会自动翻成中文，网页和日报默认显示中文。在网页上勾选“看英文原文”就切回英文；鼠标停在简介上，能看到另一种语言。
 
-- 用的是谷歌翻译的免费接口，不需要 API Key。请求通过 `curl` 发出，因为这个接口会拒绝 Python 自带 urllib 的请求。
+- 两个翻译引擎按顺序尝试：先用 **GitHub Models**（GitHub 官方的模型接口，在 Actions 里用自带的 token 免费调用，工作流已经加了 `models: read` 权限），不行再用**谷歌翻译**的免费接口（通过 `curl` 调用；它会拒绝 GitHub Actions 服务器的请求，在本机能用，但翻多了也会被限流）。都失败就先保留英文。
+- 在本机运行时，没有 `GITHUB_TOKEN`、或者 VPN 拦截了 models.github.ai，会自动跳过 GitHub Models。
 - 只翻译新出现、或者简介改过的项目，结果存在 `data/repos.json` 的 `desc_zh` 里。翻译失败就保留英文，下次运行再补。
 - 机器翻译常把专有名词翻错，比如 LLM 翻成“法学硕士”、Obsidian 翻成“黑曜石”。`categories.json` 的 `translate.glossary` 是替换表，翻完自动纠正，可以自己往里加。
 - 分类仍然按英文原文判断，翻译不影响分类。
