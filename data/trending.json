@@ -1,96 +1,77 @@
 {
- "date": "2026-11-08",
+ "date": "2026-11-09",
  "repos": {
-  "vercel-labs/agent-browser": {
-   "daily": 190,
-   "weekly": 1476
-  },
-  "cloudflare/security-audit-skill": {
-   "daily": 2085
-  },
-  "google/skills": {
-   "daily": 443
-  },
-  "mattpocock/skills": {
-   "daily": 1100,
-   "weekly": 9664
-  },
-  "anthropics/skills": {
-   "daily": 390,
-   "weekly": 2796
-  },
-  "meta/astryx": {
-   "daily": 96
-  },
-  "prometheus/prometheus": {
-   "daily": 322
-  },
   "sherlock-project/sherlock": {
-   "daily": 1766
-  },
-  "milind-soni/OpenMausBot": {
-   "daily": 1955,
-   "weekly": 7077
-  },
-  "astral-sh/ruff": {
-   "daily": 350
-  },
-  "tailwindlabs/tailwindcss": {
-   "daily": 122
-  },
-  "mbillow/localthings": {
-   "daily": 186
-  },
-  "zed-industries/zed": {
-   "daily": 1114
-  },
-  "ranxianglei/billion-context": {
-   "daily": 191
+   "daily": 2373
   },
   "dsx-ai-factory/nvke": {
-   "daily": 123
+   "daily": 345
+  },
+  "milind-soni/OpenMausBot": {
+   "daily": 1439,
+   "weekly": 7621
+  },
+  "anthropics/claude-quickstarts": {
+   "daily": 32
+  },
+  "vercel-labs/agent-browser": {
+   "daily": 815,
+   "weekly": 2190
+  },
+  "meta/astryx": {
+   "daily": 875
+  },
+  "anthropics/skills": {
+   "daily": 792,
+   "weekly": 3169
+  },
+  "google-deepmind/mujoco": {
+   "daily": 41
+  },
+  "ranxianglei/billion-context": {
+   "daily": 460
+  },
+  "NVIDIA/auto-ontology": {
+   "weekly": 9327
   },
   "thedotmack/claude-mem": {
-   "weekly": 7482
+   "weekly": 6443
   },
   "max-sixty/worktrunk": {
-   "weekly": 2292
+   "weekly": 2313
   },
   "Donchitos/Claude-Code-Game-Studios": {
-   "weekly": 5719
-  },
-  "Renhuai123/ziwei-doushu": {
-   "weekly": 4906
+   "weekly": 5235
   },
   "pingdotgg/t3code": {
-   "weekly": 17100
+   "weekly": 15379
   },
   "Nutlope/hallmark": {
-   "weekly": 6624
+   "weekly": 6356
+  },
+  "Renhuai123/ziwei-doushu": {
+   "weekly": 4191
   },
   "D4Vinci/Scrapling": {
-   "weekly": 8712
+   "weekly": 8342
+  },
+  "mattpocock/skills": {
+   "weekly": 9635
   },
   "jakubkrehel/skills": {
-   "weekly": 1938
-  },
-  "hyprwm/Hyprland": {
-   "weekly": 1436
+   "weekly": 1857
   },
   "github/spec-kit": {
-   "weekly": 4280
-  },
-  "obra/superpowers": {
-   "weekly": 4466
+   "weekly": 4045
   },
   "The-PR-Agent/pr-agent": {
-   "weekly": 1576
+   "weekly": 1706
   },
-  "pbakaus/impeccable": {
-   "weekly": 7623
+  "hyprwm/Hyprland": {
+   "weekly": 1465
   },
-  "shiyu-coder/Kronos": {
-   "weekly": 2937
+  "blader/humanizer": {
+   "weekly": 3118
   }
  }
 }
