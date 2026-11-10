@@ -1,77 +1,74 @@
 {
- "date": "2026-11-09",
+ "date": "2026-11-10",
  "repos": {
-  "sherlock-project/sherlock": {
-   "daily": 2373
-  },
-  "dsx-ai-factory/nvke": {
-   "daily": 345
-  },
-  "milind-soni/OpenMausBot": {
-   "daily": 1439,
-   "weekly": 7621
-  },
-  "anthropics/claude-quickstarts": {
-   "daily": 32
-  },
-  "vercel-labs/agent-browser": {
-   "daily": 815,
-   "weekly": 2190
+  "anthropics/skills": {
+   "daily": 1038,
+   "weekly": 3796
   },
   "meta/astryx": {
-   "daily": 875
+   "daily": 3278
   },
-  "anthropics/skills": {
-   "daily": 792,
-   "weekly": 3169
+  "sherlock-project/sherlock": {
+   "daily": 4267
   },
   "google-deepmind/mujoco": {
-   "daily": 41
+   "daily": 574
   },
-  "ranxianglei/billion-context": {
-   "daily": 460
+  "anthropics/claude-quickstarts": {
+   "daily": 551
+  },
+  "garrytan/gbrain": {
+   "daily": 216
+  },
+  "vercel-labs/agent-browser": {
+   "daily": 916,
+   "weekly": 2994
+  },
+  "ruvnet/RuView": {
+   "daily": 172
+  },
+  "ZhuLinsen/daily_stock_analysis": {
+   "daily": 506
+  },
+  "homeassistant-ai/ha-mcp": {
+   "daily": 31
+  },
+  "milind-soni/OpenMausBot": {
+   "daily": 1587,
+   "weekly": 8325
   },
   "NVIDIA/auto-ontology": {
-   "weekly": 9327
+   "weekly": 10159
   },
-  "thedotmack/claude-mem": {
-   "weekly": 6443
+  "vercel-labs/agent-desktop": {
+   "weekly": 12120
   },
   "max-sixty/worktrunk": {
-   "weekly": 2313
+   "weekly": 2395
+  },
+  "thedotmack/claude-mem": {
+   "weekly": 5130
   },
   "Donchitos/Claude-Code-Game-Studios": {
-   "weekly": 5235
+   "weekly": 4324
   },
   "pingdotgg/t3code": {
-   "weekly": 15379
-  },
-  "Nutlope/hallmark": {
-   "weekly": 6356
-  },
-  "Renhuai123/ziwei-doushu": {
-   "weekly": 4191
+   "weekly": 13448
   },
   "D4Vinci/Scrapling": {
-   "weekly": 8342
-  },
-  "mattpocock/skills": {
-   "weekly": 9635
-  },
-  "jakubkrehel/skills": {
-   "weekly": 1857
-  },
-  "github/spec-kit": {
-   "weekly": 4045
+   "weekly": 8226
   },
   "The-PR-Agent/pr-agent": {
-   "weekly": 1706
+   "weekly": 1822
   },
-  "hyprwm/Hyprland": {
-   "weekly": 1465
+  "cloudflare/security-audit-skill": {
+   "weekly": 10695
   },
-  "blader/humanizer": {
-   "weekly": 3118
+  "Nutlope/hallmark": {
+   "weekly": 5987
+  },
+  "mattpocock/skills": {
+   "weekly": 9800
   }
  }
 }
