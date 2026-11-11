@@ -1,74 +1,77 @@
 {
- "date": "2026-11-10",
+ "date": "2026-11-11",
  "repos": {
-  "anthropics/skills": {
-   "daily": 1038,
-   "weekly": 3796
-  },
   "meta/astryx": {
-   "daily": 3278
+   "daily": 3108
   },
-  "sherlock-project/sherlock": {
-   "daily": 4267
+  "anthropics/skills": {
+   "daily": 1679,
+   "weekly": 5014
   },
-  "google-deepmind/mujoco": {
-   "daily": 574
+  "addyosmani/agent-skills": {
+   "daily": 465
   },
   "anthropics/claude-quickstarts": {
-   "daily": 551
+   "daily": 531
   },
-  "garrytan/gbrain": {
-   "daily": 216
+  "google-deepmind/mujoco": {
+   "daily": 456
   },
-  "vercel-labs/agent-browser": {
-   "daily": 916,
-   "weekly": 2994
-  },
-  "ruvnet/RuView": {
-   "daily": 172
-  },
-  "ZhuLinsen/daily_stock_analysis": {
-   "daily": 506
+  "we-promise/sure": {
+   "daily": 159
   },
   "homeassistant-ai/ha-mcp": {
-   "daily": 31
+   "daily": 790
   },
-  "milind-soni/OpenMausBot": {
-   "daily": 1587,
-   "weekly": 8325
+  "vercel-labs/agent-browser": {
+   "daily": 780,
+   "weekly": 3606
   },
-  "NVIDIA/auto-ontology": {
-   "weekly": 10159
+  "sherlock-project/sherlock": {
+   "daily": 2393
   },
-  "vercel-labs/agent-desktop": {
-   "weekly": 12120
+  "tokio-rs/topcoat": {
+   "daily": 192
   },
-  "max-sixty/worktrunk": {
-   "weekly": 2395
-  },
-  "thedotmack/claude-mem": {
-   "weekly": 5130
-  },
-  "Donchitos/Claude-Code-Game-Studios": {
-   "weekly": 4324
-  },
-  "pingdotgg/t3code": {
-   "weekly": 13448
-  },
-  "D4Vinci/Scrapling": {
-   "weekly": 8226
-  },
-  "The-PR-Agent/pr-agent": {
-   "weekly": 1822
-  },
-  "cloudflare/security-audit-skill": {
-   "weekly": 10695
-  },
-  "Nutlope/hallmark": {
-   "weekly": 5987
+  "ranxianglei/billion-context": {
+   "daily": 375
   },
   "mattpocock/skills": {
-   "weekly": 9800
+   "daily": 1225,
+   "weekly": 9872
+  },
+  "NVIDIA/auto-ontology": {
+   "weekly": 9621
+  },
+  "vercel-labs/agent-desktop": {
+   "weekly": 9502
+  },
+  "milind-soni/OpenMausBot": {
+   "weekly": 8951
+  },
+  "max-sixty/worktrunk": {
+   "weekly": 2093
+  },
+  "Donchitos/Claude-Code-Game-Studios": {
+   "weekly": 3730
+  },
+  "cloudflare/security-audit-skill": {
+   "weekly": 10967
+  },
+  "The-PR-Agent/pr-agent": {
+   "weekly": 1591
+  },
+  "thedotmack/claude-mem": {
+   "weekly": 4473
+  },
+  "D4Vinci/Scrapling": {
+   "weekly": 7291
+  },
+  "anomalyco/hex": {
+   "weekly": 1839
+  },
+  "pingdotgg/t3code": {
+   "weekly": 11979
   }
  }
 }
