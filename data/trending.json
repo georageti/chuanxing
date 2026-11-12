@@ -1,77 +1,72 @@
 {
- "date": "2026-11-11",
+ "date": "2026-11-12",
  "repos": {
   "meta/astryx": {
-   "daily": 3108
+   "daily": 2776
   },
-  "anthropics/skills": {
-   "daily": 1679,
-   "weekly": 5014
+  "ZhuLinsen/daily_stock_analysis": {
+   "daily": 278
   },
-  "addyosmani/agent-skills": {
-   "daily": 465
-  },
-  "anthropics/claude-quickstarts": {
-   "daily": 531
-  },
-  "google-deepmind/mujoco": {
-   "daily": 456
-  },
-  "we-promise/sure": {
+  "GoogleChrome/modern-web-guidance-src": {
    "daily": 159
   },
-  "homeassistant-ai/ha-mcp": {
-   "daily": 790
+  "shadcn/improve": {
+   "daily": 361
+  },
+  "addyosmani/agent-skills": {
+   "daily": 787
   },
   "vercel-labs/agent-browser": {
-   "daily": 780,
-   "weekly": 3606
+   "daily": 708,
+   "weekly": 4183
   },
-  "sherlock-project/sherlock": {
-   "daily": 2393
+  "we-promise/sure": {
+   "daily": 1078
   },
-  "tokio-rs/topcoat": {
-   "daily": 192
+  "homeassistant-ai/ha-mcp": {
+   "daily": 645
   },
-  "ranxianglei/billion-context": {
-   "daily": 375
+  "openai/codex-security": {
+   "daily": 52
   },
-  "mattpocock/skills": {
-   "daily": 1225,
-   "weekly": 9872
+  "TheAlgorithms/Java": {
+   "daily": 51
   },
   "NVIDIA/auto-ontology": {
-   "weekly": 9621
+   "weekly": 7947
+  },
+  "anthropics/skills": {
+   "weekly": 5738
   },
   "vercel-labs/agent-desktop": {
-   "weekly": 9502
+   "weekly": 7772
   },
   "milind-soni/OpenMausBot": {
-   "weekly": 8951
-  },
-  "max-sixty/worktrunk": {
-   "weekly": 2093
-  },
-  "Donchitos/Claude-Code-Game-Studios": {
-   "weekly": 3730
+   "weekly": 9257
   },
   "cloudflare/security-audit-skill": {
-   "weekly": 10967
+   "weekly": 11507
   },
-  "The-PR-Agent/pr-agent": {
-   "weekly": 1591
-  },
-  "thedotmack/claude-mem": {
-   "weekly": 4473
+  "mattpocock/skills": {
+   "weekly": 9575
   },
   "D4Vinci/Scrapling": {
-   "weekly": 7291
+   "weekly": 5814
   },
-  "anomalyco/hex": {
-   "weekly": 1839
+  "zed-industries/zed": {
+   "weekly": 2310
   },
-  "pingdotgg/t3code": {
-   "weekly": 11979
+  "Donchitos/Claude-Code-Game-Studios": {
+   "weekly": 3150
+  },
+  "google/skills": {
+   "weekly": 2013
+  },
+  "google-deepmind/mujoco": {
+   "weekly": 1535
+  },
+  "herdrdev/herdr": {
+   "weekly": 2213
   }
  }
 }
