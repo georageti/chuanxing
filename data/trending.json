@@ -1,72 +1,77 @@
 {
- "date": "2026-11-12",
+ "date": "2026-11-13",
  "repos": {
-  "meta/astryx": {
-   "daily": 2776
-  },
-  "ZhuLinsen/daily_stock_analysis": {
-   "daily": 278
-  },
   "GoogleChrome/modern-web-guidance-src": {
-   "daily": 159
-  },
-  "shadcn/improve": {
-   "daily": 361
-  },
-  "addyosmani/agent-skills": {
-   "daily": 787
-  },
-  "vercel-labs/agent-browser": {
-   "daily": 708,
-   "weekly": 4183
-  },
-  "we-promise/sure": {
-   "daily": 1078
-  },
-  "homeassistant-ai/ha-mcp": {
-   "daily": 645
+   "daily": 739
   },
   "openai/codex-security": {
-   "daily": 52
+   "daily": 643
   },
-  "TheAlgorithms/Java": {
-   "daily": 51
+  "nvm-sh/nvm": {
+   "daily": 63
   },
-  "NVIDIA/auto-ontology": {
-   "weekly": 7947
+  "pookjw/HermesEnabler": {
+   "daily": 218
+  },
+  "we-promise/sure": {
+   "daily": 967
+  },
+  "QwenLM/qwen-code": {
+   "daily": 151
+  },
+  "ashhart/TensorFold": {
+   "daily": 54
+  },
+  "nodejs/node": {
+   "daily": 62
+  },
+  "addyosmani/agent-skills": {
+   "daily": 816
+  },
+  "meta/astryx": {
+   "daily": 1830
+  },
+  "CopilotKit/OpenBot": {
+   "daily": 298
+  },
+  "Alishahryar1/free-claude-code": {
+   "daily": 415
+  },
+  "ggml-org/llama.cpp": {
+   "daily": 176
   },
   "anthropics/skills": {
-   "weekly": 5738
-  },
-  "vercel-labs/agent-desktop": {
-   "weekly": 7772
+   "weekly": 6055
   },
   "milind-soni/OpenMausBot": {
-   "weekly": 9257
+   "weekly": 9104
+  },
+  "vercel-labs/agent-browser": {
+   "weekly": 4601
+  },
+  "NVIDIA/auto-ontology": {
+   "weekly": 5802
   },
   "cloudflare/security-audit-skill": {
-   "weekly": 11507
+   "weekly": 10700
+  },
+  "vercel-labs/agent-desktop": {
+   "weekly": 6414
   },
   "mattpocock/skills": {
-   "weekly": 9575
-  },
-  "D4Vinci/Scrapling": {
-   "weekly": 5814
+   "weekly": 8731
   },
   "zed-industries/zed": {
-   "weekly": 2310
-  },
-  "Donchitos/Claude-Code-Game-Studios": {
-   "weekly": 3150
-  },
-  "google/skills": {
-   "weekly": 2013
+   "weekly": 2339
   },
   "google-deepmind/mujoco": {
-   "weekly": 1535
+   "weekly": 1671
   },
-  "herdrdev/herdr": {
-   "weekly": 2213
+  "google/skills": {
+   "weekly": 1933
+  },
+  "D4Vinci/Scrapling": {
+   "weekly": 4743
   }
  }
 }
