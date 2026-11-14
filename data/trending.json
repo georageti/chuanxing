@@ -1,77 +1,84 @@
 {
- "date": "2026-11-13",
+ "date": "2026-11-14",
  "repos": {
+  "alibaba/open-code-review": {
+   "daily": 215
+  },
   "GoogleChrome/modern-web-guidance-src": {
-   "daily": 739
+   "daily": 1925
   },
   "openai/codex-security": {
-   "daily": 643
+   "daily": 751
   },
-  "nvm-sh/nvm": {
-   "daily": 63
-  },
-  "pookjw/HermesEnabler": {
-   "daily": 218
+  "ZhuLinsen/daily_stock_analysis": {
+   "daily": 256,
+   "weekly": 3778
   },
   "we-promise/sure": {
-   "daily": 967
+   "daily": 925
   },
-  "QwenLM/qwen-code": {
-   "daily": 151
+  "backnotprop/plannotator": {
+   "daily": 108
   },
-  "ashhart/TensorFold": {
-   "daily": 54
+  "louislam/uptime-kuma": {
+   "daily": 71
   },
-  "nodejs/node": {
-   "daily": 62
+  "block/buzz": {
+   "daily": 97
   },
-  "addyosmani/agent-skills": {
-   "daily": 816
+  "tradermonty/claude-trading-skills": {
+   "daily": 69
   },
-  "meta/astryx": {
-   "daily": 1830
+  "tailscale/tailcat": {
+   "daily": 256
   },
-  "CopilotKit/OpenBot": {
-   "daily": 298
+  "Likely7/Veyra-NRVideo": {
+   "daily": 256
   },
-  "Alishahryar1/free-claude-code": {
-   "daily": 415
+  "ChromeDevTools/chrome-devtools-mcp": {
+   "daily": 67
   },
-  "ggml-org/llama.cpp": {
-   "daily": 176
+  "sherlock-project/sherlock": {
+   "weekly": 13364
   },
   "anthropics/skills": {
-   "weekly": 6055
+   "weekly": 6169
   },
   "milind-soni/OpenMausBot": {
-   "weekly": 9104
+   "weekly": 7763
   },
   "vercel-labs/agent-browser": {
-   "weekly": 4601
+   "weekly": 4360
+  },
+  "google/elephant-goldfish-model": {
+   "weekly": 5560
   },
   "NVIDIA/auto-ontology": {
-   "weekly": 5802
-  },
-  "cloudflare/security-audit-skill": {
-   "weekly": 10700
-  },
-  "vercel-labs/agent-desktop": {
-   "weekly": 6414
-  },
-  "mattpocock/skills": {
-   "weekly": 8731
-  },
-  "zed-industries/zed": {
-   "weekly": 2339
+   "weekly": 4108
   },
   "google-deepmind/mujoco": {
-   "weekly": 1671
+   "weekly": 1764
   },
-  "google/skills": {
-   "weekly": 1933
+  "mattpocock/skills": {
+   "weekly": 7599
   },
-  "D4Vinci/Scrapling": {
-   "weekly": 4743
+  "addyosmani/agent-skills": {
+   "weekly": 3502
+  },
+  "cloudflare/security-audit-skill": {
+   "weekly": 8829
+  },
+  "zed-industries/zed": {
+   "weekly": 2117
+  },
+  "anthropics/claude-quickstarts": {
+   "weekly": 1731
+  },
+  "vercel-labs/agent-desktop": {
+   "weekly": 5408
+  },
+  "lobehub/lobehub": {
+   "weekly": 1126
   }
  }
 }
