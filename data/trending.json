@@ -1,84 +1,81 @@
 {
- "date": "2026-11-14",
+ "date": "2026-11-15",
  "repos": {
-  "alibaba/open-code-review": {
-   "daily": 215
+  "backnotprop/plannotator": {
+   "daily": 408,
+   "weekly": 818
   },
   "GoogleChrome/modern-web-guidance-src": {
-   "daily": 1925
-  },
-  "openai/codex-security": {
-   "daily": 751
-  },
-  "ZhuLinsen/daily_stock_analysis": {
-   "daily": 256,
-   "weekly": 3778
-  },
-  "we-promise/sure": {
-   "daily": 925
-  },
-  "backnotprop/plannotator": {
-   "daily": 108
-  },
-  "louislam/uptime-kuma": {
-   "daily": 71
-  },
-  "block/buzz": {
-   "daily": 97
+   "daily": 1231
   },
   "tradermonty/claude-trading-skills": {
-   "daily": 69
-  },
-  "tailscale/tailcat": {
-   "daily": 256
-  },
-  "Likely7/Veyra-NRVideo": {
-   "daily": 256
+   "daily": 553
   },
   "ChromeDevTools/chrome-devtools-mcp": {
-   "daily": 67
+   "daily": 664
+  },
+  "alibaba/open-code-review": {
+   "daily": 893
+  },
+  "QwenLM/qwen-code": {
+   "daily": 64
+  },
+  "dream-num/univer": {
+   "daily": 495
+  },
+  "ag-ui-protocol/ag-ui": {
+   "daily": 9
+  },
+  "ashhart/TensorFold": {
+   "daily": 37
+  },
+  "JuliusBrussee/caveman": {
+   "daily": 227
+  },
+  "louislam/uptime-kuma": {
+   "daily": 430
+  },
+  "we-promise/sure": {
+   "daily": 659
+  },
+  "Tencent/LoopForge": {
+   "daily": 33
+  },
+  "Likely7/Veyra-NRVideo": {
+   "daily": 420
+  },
+  "martin-olivier/airgorah": {
+   "daily": 270
+  },
+  "meta/astryx": {
+   "weekly": 13660
   },
   "sherlock-project/sherlock": {
-   "weekly": 13364
+   "weekly": 12401
   },
   "anthropics/skills": {
-   "weekly": 6169
-  },
-  "milind-soni/OpenMausBot": {
-   "weekly": 7763
+   "weekly": 6220
   },
   "vercel-labs/agent-browser": {
-   "weekly": 4360
+   "weekly": 4601
   },
   "google/elephant-goldfish-model": {
-   "weekly": 5560
+   "weekly": 5539
   },
-  "NVIDIA/auto-ontology": {
-   "weekly": 4108
+  "milind-soni/OpenMausBot": {
+   "weekly": 6413
+  },
+  "ZhuLinsen/daily_stock_analysis": {
+   "weekly": 4526
   },
   "google-deepmind/mujoco": {
-   "weekly": 1764
-  },
-  "mattpocock/skills": {
-   "weekly": 7599
+   "weekly": 1859
   },
   "addyosmani/agent-skills": {
-   "weekly": 3502
-  },
-  "cloudflare/security-audit-skill": {
-   "weekly": 8829
-  },
-  "zed-industries/zed": {
-   "weekly": 2117
+   "weekly": 3670
   },
   "anthropics/claude-quickstarts": {
-   "weekly": 1731
-  },
-  "vercel-labs/agent-desktop": {
-   "weekly": 5408
-  },
-  "lobehub/lobehub": {
-   "weekly": 1126
+   "weekly": 1794
   }
  }
 }
