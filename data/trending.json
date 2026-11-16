@@ -1,81 +1,72 @@
 {
- "date": "2026-11-15",
+ "date": "2026-11-16",
  "repos": {
-  "backnotprop/plannotator": {
-   "daily": 408,
-   "weekly": 818
-  },
-  "GoogleChrome/modern-web-guidance-src": {
-   "daily": 1231
-  },
-  "tradermonty/claude-trading-skills": {
-   "daily": 553
-  },
-  "ChromeDevTools/chrome-devtools-mcp": {
-   "daily": 664
-  },
-  "alibaba/open-code-review": {
-   "daily": 893
-  },
-  "QwenLM/qwen-code": {
-   "daily": 64
-  },
   "dream-num/univer": {
-   "daily": 495
+   "daily": 988
   },
   "ag-ui-protocol/ag-ui": {
-   "daily": 9
+   "daily": 355
   },
-  "ashhart/TensorFold": {
-   "daily": 37
+  "google-labs-code/stitch-skills": {
+   "daily": 247
   },
-  "JuliusBrussee/caveman": {
-   "daily": 227
+  "backnotprop/plannotator": {
+   "daily": 866,
+   "weekly": 1719
   },
-  "louislam/uptime-kuma": {
-   "daily": 430
+  "ChromeDevTools/chrome-devtools-mcp": {
+   "daily": 717
   },
-  "we-promise/sure": {
-   "daily": 659
+  "alibaba/open-code-review": {
+   "daily": 691
   },
   "Tencent/LoopForge": {
-   "daily": 33
+   "daily": 423
   },
-  "Likely7/Veyra-NRVideo": {
-   "daily": 420
+  "ggml-org/ggml": {
+   "daily": 43
   },
-  "martin-olivier/airgorah": {
-   "daily": 270
+  "elementalsouls/Claude-BugHunter": {
+   "daily": 98
+  },
+  "GoogleChrome/modern-web-guidance-src": {
+   "daily": 1219
+  },
+  "tradermonty/claude-trading-skills": {
+   "daily": 706
+  },
+  "NVIDIA/SkillEvaluator": {
+   "daily": 122
   },
   "meta/astryx": {
-   "weekly": 13660
-  },
-  "sherlock-project/sherlock": {
-   "weekly": 12401
+   "weekly": 13501
   },
   "anthropics/skills": {
-   "weekly": 6220
+   "weekly": 6077
+  },
+  "sherlock-project/sherlock": {
+   "weekly": 10412
   },
   "vercel-labs/agent-browser": {
-   "weekly": 4601
-  },
-  "google/elephant-goldfish-model": {
-   "weekly": 5539
-  },
-  "milind-soni/OpenMausBot": {
-   "weekly": 6413
+   "weekly": 4217
   },
   "ZhuLinsen/daily_stock_analysis": {
-   "weekly": 4526
+   "weekly": 4548
+  },
+  "we-promise/sure": {
+   "weekly": 4556
+  },
+  "milind-soni/OpenMausBot": {
+   "weekly": 5463
+  },
+  "google/elephant-goldfish-model": {
+   "weekly": 5060
   },
   "google-deepmind/mujoco": {
-   "weekly": 1859
+   "weekly": 1922
   },
   "addyosmani/agent-skills": {
-   "weekly": 3670
-  },
-  "anthropics/claude-quickstarts": {
-   "weekly": 1794
+   "weekly": 3889
   }
  }
 }
