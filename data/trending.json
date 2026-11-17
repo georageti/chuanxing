@@ -1,72 +1,88 @@
 {
- "date": "2026-11-16",
+ "date": "2026-11-17",
  "repos": {
-  "dream-num/univer": {
-   "daily": 988
-  },
   "ag-ui-protocol/ag-ui": {
-   "daily": 355
-  },
-  "google-labs-code/stitch-skills": {
-   "daily": 247
+   "daily": 791
   },
   "backnotprop/plannotator": {
-   "daily": 866,
-   "weekly": 1719
+   "daily": 696,
+   "weekly": 2325
   },
-  "ChromeDevTools/chrome-devtools-mcp": {
-   "daily": 717
-  },
-  "alibaba/open-code-review": {
-   "daily": 691
-  },
-  "Tencent/LoopForge": {
-   "daily": 423
-  },
-  "ggml-org/ggml": {
-   "daily": 43
-  },
-  "elementalsouls/Claude-BugHunter": {
-   "daily": 98
-  },
-  "GoogleChrome/modern-web-guidance-src": {
-   "daily": 1219
+  "dream-num/univer": {
+   "daily": 1828
   },
   "tradermonty/claude-trading-skills": {
-   "daily": 706
+   "daily": 837
+  },
+  "elementalsouls/Claude-BugHunter": {
+   "daily": 1094
+  },
+  "getarcaneapp/arcane": {
+   "daily": 46
+  },
+  "DeanChensj/jiangshan-map": {
+   "daily": 288
+  },
+  "google-labs-code/stitch-skills": {
+   "daily": 529
+  },
+  "mvanhorn/last30days-skill": {
+   "daily": 135
   },
   "NVIDIA/SkillEvaluator": {
-   "daily": 122
+   "daily": 873
+  },
+  "alibaba/open-code-review": {
+   "daily": 951,
+   "weekly": 3056
+  },
+  "google-research/paper-orchestra": {
+   "daily": 313
+  },
+  "ChromeDevTools/chrome-devtools-mcp": {
+   "daily": 841
+  },
+  "sveltejs/svelte": {
+   "daily": 115
+  },
+  "kajisho5/ffmpeg-skill": {
+   "daily": 367
+  },
+  "GoogleChrome/modern-web-guidance-src": {
+   "weekly": 6542
   },
   "meta/astryx": {
-   "weekly": 13501
+   "weekly": 10939
   },
   "anthropics/skills": {
-   "weekly": 6077
-  },
-  "sherlock-project/sherlock": {
-   "weekly": 10412
+   "weekly": 5666
   },
   "vercel-labs/agent-browser": {
-   "weekly": 4217
-  },
-  "ZhuLinsen/daily_stock_analysis": {
-   "weekly": 4548
+   "weekly": 3760
   },
   "we-promise/sure": {
-   "weekly": 4556
+   "weekly": 4679
   },
-  "milind-soni/OpenMausBot": {
-   "weekly": 5463
+  "ZhuLinsen/daily_stock_analysis": {
+   "weekly": 4355
+  },
+  "sherlock-project/sherlock": {
+   "weekly": 7067
   },
   "google/elephant-goldfish-model": {
-   "weekly": 5060
+   "weekly": 4249
   },
   "google-deepmind/mujoco": {
-   "weekly": 1922
+   "weekly": 1448
   },
   "addyosmani/agent-skills": {
-   "weekly": 3889
+   "weekly": 3960
+  },
+  "openai/codex-security": {
+   "weekly": 2352
+  },
+  "QwenLM/qwen-code": {
+   "weekly": 1497
   }
  }
 }
