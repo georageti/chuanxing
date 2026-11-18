@@ -1,88 +1,84 @@
 {
- "date": "2026-11-17",
+ "date": "2026-11-18",
  "repos": {
-  "ag-ui-protocol/ag-ui": {
-   "daily": 791
-  },
-  "backnotprop/plannotator": {
-   "daily": 696,
-   "weekly": 2325
-  },
-  "dream-num/univer": {
-   "daily": 1828
-  },
-  "tradermonty/claude-trading-skills": {
-   "daily": 837
-  },
   "elementalsouls/Claude-BugHunter": {
-   "daily": 1094
-  },
-  "getarcaneapp/arcane": {
-   "daily": 46
-  },
-  "DeanChensj/jiangshan-map": {
-   "daily": 288
-  },
-  "google-labs-code/stitch-skills": {
-   "daily": 529
+   "daily": 1005,
+   "weekly": 2508
   },
   "mvanhorn/last30days-skill": {
-   "daily": 135
-  },
-  "NVIDIA/SkillEvaluator": {
-   "daily": 873
+   "daily": 696
   },
   "alibaba/open-code-review": {
-   "daily": 951,
-   "weekly": 3056
+   "daily": 763,
+   "weekly": 3675
   },
-  "google-research/paper-orchestra": {
-   "daily": 313
+  "Tencent/LoopForge": {
+   "daily": 591
   },
-  "ChromeDevTools/chrome-devtools-mcp": {
-   "daily": 841
+  "dream-num/univer": {
+   "daily": 1774
+  },
+  "getarcaneapp/arcane": {
+   "daily": 618
+  },
+  "google-labs-code/stitch-skills": {
+   "daily": 350,
+   "weekly": 1197
+  },
+  "cursor/plugins": {
+   "daily": 201
+  },
+  "obra/superpowers": {
+   "daily": 1917
+  },
+  "ag-ui-protocol/ag-ui": {
+   "daily": 1445
+  },
+  "backnotprop/plannotator": {
+   "daily": 691,
+   "weekly": 2926
   },
   "sveltejs/svelte": {
-   "daily": 115
+   "daily": 477
   },
-  "kajisho5/ffmpeg-skill": {
-   "daily": 367
+  "affaan-m/ECC": {
+   "daily": 883
+  },
+  "jingyaogong/minimind": {
+   "daily": 192
+  },
+  "google-research/paper-orchestra": {
+   "daily": 1072
   },
   "GoogleChrome/modern-web-guidance-src": {
-   "weekly": 6542
+   "weekly": 7015
   },
   "meta/astryx": {
-   "weekly": 10939
-  },
-  "anthropics/skills": {
-   "weekly": 5666
-  },
-  "vercel-labs/agent-browser": {
-   "weekly": 3760
+   "weekly": 8700
   },
   "we-promise/sure": {
-   "weekly": 4679
+   "weekly": 4786
   },
   "ZhuLinsen/daily_stock_analysis": {
-   "weekly": 4355
+   "weekly": 3653
   },
-  "sherlock-project/sherlock": {
-   "weekly": 7067
+  "anthropics/skills": {
+   "weekly": 4847
   },
-  "google/elephant-goldfish-model": {
-   "weekly": 4249
+  "vercel-labs/agent-browser": {
+   "weekly": 3429
   },
-  "google-deepmind/mujoco": {
-   "weekly": 1448
+  "ChromeDevTools/chrome-devtools-mcp": {
+   "weekly": 2948
   },
-  "addyosmani/agent-skills": {
-   "weekly": 3960
+  "tradermonty/claude-trading-skills": {
+   "weekly": 2985
   },
   "openai/codex-security": {
-   "weekly": 2352
+   "weekly": 2531
   },
-  "QwenLM/qwen-code": {
-   "weekly": 1497
+  "addyosmani/agent-skills": {
+   "weekly": 3884
   }
  }
 }
