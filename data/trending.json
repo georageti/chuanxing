@@ -1,84 +1,103 @@
 {
- "date": "2026-11-18",
+ "date": "2026-11-19",
  "repos": {
-  "elementalsouls/Claude-BugHunter": {
-   "daily": 1005,
-   "weekly": 2508
+  "cursor/plugins": {
+   "daily": 314
+  },
+  "HKUDS/CLI-Anything": {
+   "daily": 389
   },
   "mvanhorn/last30days-skill": {
-   "daily": 696
-  },
-  "alibaba/open-code-review": {
-   "daily": 763,
-   "weekly": 3675
-  },
-  "Tencent/LoopForge": {
-   "daily": 591
-  },
-  "dream-num/univer": {
-   "daily": 1774
+   "daily": 1059,
+   "weekly": 2423
   },
   "getarcaneapp/arcane": {
-   "daily": 618
+   "daily": 547
   },
-  "google-labs-code/stitch-skills": {
-   "daily": 350,
-   "weekly": 1197
+  "NVIDIA/SkillEvaluator": {
+   "daily": 312
   },
-  "cursor/plugins": {
-   "daily": 201
+  "nvm-sh/nvm": {
+   "daily": 237
   },
-  "obra/superpowers": {
-   "daily": 1917
-  },
-  "ag-ui-protocol/ag-ui": {
-   "daily": 1445
-  },
-  "backnotprop/plannotator": {
-   "daily": 691,
-   "weekly": 2926
-  },
-  "sveltejs/svelte": {
-   "daily": 477
-  },
-  "affaan-m/ECC": {
-   "daily": 883
-  },
-  "jingyaogong/minimind": {
-   "daily": 192
+  "astral-sh/uv": {
+   "daily": 258
   },
   "google-research/paper-orchestra": {
-   "daily": 1072
+   "daily": 1524
+  },
+  "google-labs-code/stitch-skills": {
+   "daily": 365,
+   "weekly": 1567
+  },
+  "sveltejs/svelte": {
+   "daily": 692
+  },
+  "jquery/jquery": {
+   "daily": 266
+  },
+  "appwrite/appwrite": {
+   "daily": 232
+  },
+  "openvinotoolkit/openvino": {
+   "daily": 24
+  },
+  "obra/superpowers": {
+   "daily": 822
+  },
+  "affaan-m/ECC": {
+   "daily": 1108
+  },
+  "DeanChensj/jiangshan-map": {
+   "daily": 218
+  },
+  "n8n-io/n8n": {
+   "daily": 325
+  },
+  "solidjs/solid": {
+   "daily": 40
+  },
+  "punkpeye/awesome-mcp-servers": {
+   "daily": 53
   },
   "GoogleChrome/modern-web-guidance-src": {
-   "weekly": 7015
+   "weekly": 7257
+  },
+  "backnotprop/plannotator": {
+   "weekly": 3290
   },
   "meta/astryx": {
-   "weekly": 8700
+   "weekly": 6250
   },
   "we-promise/sure": {
-   "weekly": 4786
+   "weekly": 3866
   },
-  "ZhuLinsen/daily_stock_analysis": {
-   "weekly": 3653
-  },
-  "anthropics/skills": {
-   "weekly": 4847
-  },
-  "vercel-labs/agent-browser": {
-   "weekly": 3429
-  },
-  "ChromeDevTools/chrome-devtools-mcp": {
-   "weekly": 2948
+  "alibaba/open-code-review": {
+   "weekly": 4383
   },
   "tradermonty/claude-trading-skills": {
-   "weekly": 2985
+   "weekly": 3242
+  },
+  "ChromeDevTools/chrome-devtools-mcp": {
+   "weekly": 3143
+  },
+  "anthropics/skills": {
+   "weekly": 4381
+  },
+  "ZhuLinsen/daily_stock_analysis": {
+   "weekly": 3566
+  },
+  "ag-ui-protocol/ag-ui": {
+   "weekly": 3221
+  },
+  "vercel-labs/agent-browser": {
+   "weekly": 2987
   },
   "openai/codex-security": {
-   "weekly": 2531
+   "weekly": 2630
   },
-  "addyosmani/agent-skills": {
-   "weekly": 3884
+  "dream-num/univer": {
+   "weekly": 6840
   }
  }
 }
