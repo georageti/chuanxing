@@ -1,103 +1,88 @@
 {
- "date": "2026-11-19",
+ "date": "2026-11-20",
  "repos": {
-  "cursor/plugins": {
-   "daily": 314
-  },
-  "HKUDS/CLI-Anything": {
-   "daily": 389
-  },
-  "mvanhorn/last30days-skill": {
-   "daily": 1059,
-   "weekly": 2423
-  },
-  "getarcaneapp/arcane": {
-   "daily": 547
-  },
-  "NVIDIA/SkillEvaluator": {
-   "daily": 312
-  },
-  "nvm-sh/nvm": {
-   "daily": 237
-  },
-  "astral-sh/uv": {
-   "daily": 258
-  },
-  "google-research/paper-orchestra": {
-   "daily": 1524
-  },
-  "google-labs-code/stitch-skills": {
-   "daily": 365,
-   "weekly": 1567
-  },
-  "sveltejs/svelte": {
-   "daily": 692
-  },
-  "jquery/jquery": {
-   "daily": 266
-  },
-  "appwrite/appwrite": {
-   "daily": 232
-  },
-  "openvinotoolkit/openvino": {
-   "daily": 24
+  "elementalsouls/Claude-BugHunter": {
+   "daily": 1349
   },
   "obra/superpowers": {
-   "daily": 822
+   "daily": 2028
   },
-  "affaan-m/ECC": {
-   "daily": 1108
+  "HKUDS/CLI-Anything": {
+   "daily": 898
   },
-  "DeanChensj/jiangshan-map": {
-   "daily": 218
+  "jingyaogong/minimind": {
+   "daily": 238
   },
-  "n8n-io/n8n": {
-   "daily": 325
+  "cursor/plugins": {
+   "daily": 384
   },
-  "solidjs/solid": {
-   "daily": 40
+  "firecrawl/firecrawl": {
+   "daily": 825
   },
-  "punkpeye/awesome-mcp-servers": {
-   "daily": 53
+  "nginx/nginx": {
+   "daily": 73
   },
-  "GoogleChrome/modern-web-guidance-src": {
-   "weekly": 7257
+  "openvinotoolkit/openvino": {
+   "daily": 246
+  },
+  "cathrynlavery/diagram-design": {
+   "daily": 271
+  },
+  "mvanhorn/last30days-skill": {
+   "daily": 954,
+   "weekly": 3179
+  },
+  "google-labs-code/stitch-skills": {
+   "daily": 302,
+   "weekly": 1829
+  },
+  "mjmirza/app-store-compliance": {
+   "daily": 377
+  },
+  "Tracer-Cloud/opensre": {
+   "daily": 38
+  },
+  "toeverything/AFFiNE": {
+   "daily": 182
+  },
+  "XiaoYouChR/Ghost-Downloader-3": {
+   "daily": 341
+  },
+  "zhouxiaoka/autoclip": {
+   "daily": 126
   },
   "backnotprop/plannotator": {
-   "weekly": 3290
+   "weekly": 3468
   },
-  "meta/astryx": {
-   "weekly": 6250
-  },
-  "we-promise/sure": {
-   "weekly": 3866
+  "GoogleChrome/modern-web-guidance-src": {
+   "weekly": 6858
   },
   "alibaba/open-code-review": {
-   "weekly": 4383
-  },
-  "tradermonty/claude-trading-skills": {
-   "weekly": 3242
+   "weekly": 4492
   },
   "ChromeDevTools/chrome-devtools-mcp": {
-   "weekly": 3143
+   "weekly": 3229
   },
-  "anthropics/skills": {
-   "weekly": 4381
-  },
-  "ZhuLinsen/daily_stock_analysis": {
-   "weekly": 3566
+  "tradermonty/claude-trading-skills": {
+   "weekly": 3385
   },
   "ag-ui-protocol/ag-ui": {
-   "weekly": 3221
+   "weekly": 3455
   },
-  "vercel-labs/agent-browser": {
-   "weekly": 2987
+  "meta/astryx": {
+   "weekly": 4977
   },
-  "openai/codex-security": {
-   "weekly": 2630
+  "pookjw/HermesEnabler": {
+   "weekly": 904
+  },
+  "we-promise/sure": {
+   "weekly": 3226
   },
   "dream-num/univer": {
-   "weekly": 6840
+   "weekly": 7248
+  },
+  "kajisho5/ffmpeg-skill": {
+   "weekly": 2998
   }
  }
 }
