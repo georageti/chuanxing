@@ -1,88 +1,88 @@
 {
- "date": "2026-11-22",
+ "date": "2026-11-23",
  "repos": {
   "elementalsouls/Claude-BugHunter": {
-   "daily": 1803
+   "daily": 1716
   },
   "obra/superpowers": {
-   "daily": 883
+   "daily": 788
   },
   "HKUDS/CLI-Anything": {
-   "daily": 769
+   "daily": 699
   },
   "jingyaogong/minimind": {
-   "daily": 488
+   "daily": 473
   },
   "cursor/plugins": {
-   "daily": 260
+   "daily": 294
   },
   "firecrawl/firecrawl": {
-   "daily": 1006
+   "daily": 915
   },
   "nginx/nginx": {
-   "daily": 189
+   "daily": 163
   },
   "openvinotoolkit/openvino": {
-   "daily": 200
+   "daily": 158
   },
   "cathrynlavery/diagram-design": {
-   "daily": 583
+   "daily": 518
   },
   "mvanhorn/last30days-skill": {
-   "daily": 560,
-   "weekly": 4198
+   "daily": 668,
+   "weekly": 4731
   },
   "google-labs-code/stitch-skills": {
-   "daily": 326,
-   "weekly": 2431
+   "daily": 494,
+   "weekly": 2683
   },
   "mjmirza/app-store-compliance": {
-   "daily": 720
+   "daily": 621
   },
   "Tracer-Cloud/opensre": {
-   "daily": 450
+   "daily": 399
   },
   "toeverything/AFFiNE": {
-   "daily": 574
+   "daily": 542
   },
   "XiaoYouChR/Ghost-Downloader-3": {
-   "daily": 779
+   "daily": 701
   },
   "zhouxiaoka/autoclip": {
-   "daily": 683
+   "daily": 641
   },
   "backnotprop/plannotator": {
-   "weekly": 3396
+   "weekly": 2815
   },
   "GoogleChrome/modern-web-guidance-src": {
-   "weekly": 4400
+   "weekly": 3575
   },
   "alibaba/open-code-review": {
-   "weekly": 4032
+   "weekly": 3700
   },
   "ChromeDevTools/chrome-devtools-mcp": {
-   "weekly": 2795
+   "weekly": 2268
   },
   "tradermonty/claude-trading-skills": {
-   "weekly": 3113
+   "weekly": 2616
   },
   "ag-ui-protocol/ag-ui": {
-   "weekly": 3792
+   "weekly": 3620
   },
   "meta/astryx": {
-   "weekly": 3967
+   "weekly": 3626
   },
   "pookjw/HermesEnabler": {
-   "weekly": 524
+   "weekly": 461
   },
   "we-promise/sure": {
-   "weekly": 2041
+   "weekly": 1771
   },
   "dream-num/univer": {
-   "weekly": 7240
+   "weekly": 6436
   },
   "kajisho5/ffmpeg-skill": {
-   "weekly": 3598
+   "weekly": 3748
   }
  }
 }
