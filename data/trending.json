@@ -1,94 +1,94 @@
 {
- "date": "2026-11-27",
+ "date": "2026-11-28",
  "repos": {
   "elementalsouls/Claude-BugHunter": {
-   "daily": 1597
+   "daily": 1608
   },
   "obra/superpowers": {
-   "daily": 854
+   "daily": 922
   },
   "HKUDS/CLI-Anything": {
-   "daily": 746
+   "daily": 666
   },
   "jingyaogong/minimind": {
-   "daily": 702
+   "daily": 660
   },
   "cursor/plugins": {
-   "daily": 270
+   "daily": 243
   },
   "firecrawl/firecrawl": {
-   "daily": 1046
+   "daily": 822
   },
   "nginx/nginx": {
-   "daily": 150
+   "daily": 146
   },
   "openvinotoolkit/openvino": {
-   "daily": 176
+   "daily": 151
   },
   "cathrynlavery/diagram-design": {
-   "daily": 955
+   "daily": 725
   },
   "mvanhorn/last30days-skill": {
-   "daily": 759,
-   "weekly": 5090
+   "daily": 675,
+   "weekly": 5072
   },
   "google-labs-code/stitch-skills": {
-   "daily": 309,
-   "weekly": 2619
+   "daily": 311,
+   "weekly": 2616
   },
   "mjmirza/app-store-compliance": {
-   "daily": 562
+   "daily": 530
   },
   "Tracer-Cloud/opensre": {
-   "daily": 327
+   "daily": 328
   },
   "toeverything/AFFiNE": {
-   "daily": 525
+   "daily": 474
   },
   "XiaoYouChR/Ghost-Downloader-3": {
-   "daily": 889
+   "daily": 836
   },
   "zhouxiaoka/autoclip": {
-   "daily": 774
+   "daily": 718
   },
   "backnotprop/plannotator": {
-   "weekly": 1631
+   "weekly": 1596
   },
   "GoogleChrome/modern-web-guidance-src": {
-   "weekly": 2209
+   "weekly": 2008
   },
   "n8n-io/nod": {
-   "weekly": 1165
+   "weekly": 1424
   },
   "alibaba/open-code-review": {
-   "weekly": 2284
+   "weekly": 2335
   },
   "ChromeDevTools/chrome-devtools-mcp": {
-   "weekly": 1175
+   "weekly": 1150
   },
   "tradermonty/claude-trading-skills": {
-   "weekly": 1381
+   "weekly": 1332
   },
   "ag-ui-protocol/ag-ui": {
-   "weekly": 1269
+   "weekly": 1185
   },
   "meta/astryx": {
-   "weekly": 2519
+   "weekly": 2306
   },
   "pookjw/HermesEnabler": {
-   "weekly": 325
+   "weekly": 296
   },
   "we-promise/sure": {
-   "weekly": 1430
+   "weekly": 1375
   },
   "obsidianmd/obsidian-skills": {
-   "weekly": 704
+   "weekly": 950
   },
   "dream-num/univer": {
-   "weekly": 1825
+   "weekly": 1280
   },
   "kajisho5/ffmpeg-skill": {
-   "weekly": 3229
+   "weekly": 3169
   }
  }
 }
